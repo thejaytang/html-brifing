@@ -1,0 +1,4 @@
+interface:
+  display_name: "GSAP Plugins"
+  short_description: "GSAP animation guidance: plugins"
+  default_prompt: "Use $gsap-plugins for this HTML briefing task."

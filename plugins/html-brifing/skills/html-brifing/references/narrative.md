@@ -2,6 +2,25 @@
 
 Use this during new planning, restructuring or a “hard to understand” diagnosis. A button repair does not need a new outline.
 
+## Storytelling is the lead's responsibility
+
+Decide what this audience should understand or decide by the end, using only conclusions supported by the materials. For a new briefing, form a concise thesis and title outline before choosing decoration or animation. Reuse existing project notes; do not require a new planning artifact for every task.
+
+Choose the narrative shape from the purpose:
+
+| Purpose | Useful shape | Avoid |
+|---|---|---|
+| Support a decision | Recommendation → criteria → evidence/tradeoffs → requested action | Hiding the decision behind a long implementation history |
+| Explain a mechanism | Concrete case → obstacle → design → trace the same case → verification | Listing tools without showing what changes |
+| Report progress | Intended outcome → observed change → evidence → remaining gap/next step | Treating plans as achieved results |
+| Compare independent workstreams | Shared context → parallel contributions → supported synthesis | Inventing a pipeline or causal link between separate projects |
+
+These are starting structures, not mandatory headings. Preserve project language, audience needs and the user's speaking order. Put secondary evidence in object-bound detail without hiding the core argument.
+
+For each important scene, identify the audience question, supported takeaway, source, main visual and why the next scene follows. A transition should carry an object, an unresolved question or a comparison forward; arrows and matching colors alone do not create narrative continuity. Use motion only when the state change itself explains something.
+
+Review the title outline alone: does it reveal a coherent argument? Then review the default views: can an asynchronous reader understand the core point without opening every detail? Keep test method, observation and supported conclusion together. Cut repeated setup and decorative metrics, not essential qualifications or contributor boundaries.
+
 ## Give the audience enough context
 
 Identify who performs the task, the input, the downstream use and the consequence of the current obstacle. Keep background proportional to understanding. A useful planning sentence is: “In this workflow, this role needs this outcome; this obstacle prevents it; this design changes that relationship.” Do not invent financial loss or efficiency gains to complete the sentence.

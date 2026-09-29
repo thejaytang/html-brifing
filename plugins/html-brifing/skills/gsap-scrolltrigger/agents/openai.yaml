@@ -1,0 +1,4 @@
+interface:
+  display_name: "GSAP Scrolltrigger"
+  short_description: "GSAP animation guidance: scrolltrigger"
+  default_prompt: "Use $gsap-scrolltrigger for this HTML briefing task."

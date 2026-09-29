@@ -1,6 +1,6 @@
 ---
 name: html-brifing
-description: Plan, create, revise or review evidence-led HTML project briefings and interactive presentations. Coordinate focused design, ImageGen, motion and browser skills; preserve presenter control and verify offline delivery. Use for HTML briefing environment checks, HTML work reports, technical demos and project showcases, not production websites, ordinary text updates or native PPTX authoring.
+description: Plan, create, revise or review evidence-led HTML project briefings and interactive presentations. Lead storytelling and coordinate Impeccable, UI UX Pro Max, ImageGen, GSAP, optional host Visualize and browser verification; preserve presenter control and verify offline delivery. Use for HTML briefing environment checks, HTML work reports, technical demos and project showcases, not production websites, ordinary text updates or native PPTX authoring.
 license: MIT
 ---
 
@@ -28,7 +28,7 @@ Read relevant implementation, outputs and test records, and inspect provided ima
 
 Use this argument where appropriate: context and importance → concrete problem → core design → mechanism and verification → result, value and next action. It is not a fixed slide count. Decision briefs may lead with the conclusion. Parallel projects may have separate branches; never fabricate a pipeline between independent systems.
 
-Write a short title outline before visual work. Titles alone should reveal the argument. Keep test method, observation and supported conclusion together. Read [narrative.md](references/narrative.md) when planning or restructuring. Reuse existing project records rather than creating paperwork for a small edit.
+Write a short title outline before visual work. Titles alone should reveal the argument. Keep test method, observation and supported conclusion together. Read [narrative.md](references/narrative.md) when planning or restructuring. Storytelling belongs to this lead: choose an audience takeaway, build a claim-to-evidence argument, choose a suitable narrative shape and make scene transitions explain the next question. Do not delegate this responsibility to a generic writing skill or force a fixed chapter template. Reuse existing project records rather than creating paperwork for a small edit.
 
 ## 3. Design scenes and select visual media
 
@@ -38,7 +38,7 @@ For each meaningful interaction, define: **audience question → action → chan
 
 Read [visual-interaction.md](references/visual-interaction.md) before designing or changing visual interactions. For quantitative material, read [data-visualization.md](references/data-visualization.md). For image generation or editing, read [imagegen.md](references/imagegen.md) and the available image skill. Consider imagery during scene design, not as decoration added at the end.
 
-Use Impeccable for substantial visual design work; keep small edits within the existing design. Establish shared typography, spacing, colors, selected/focus states and motion timing in the project's existing style source. Use a representative scene with real content and an adjacent transition to check a new direction, then expand it without inventing approval gates.
+Use Impeccable for visual direction and design review; consult UI UX Pro Max for focused style, typography, palette, chart or interaction references within that direction. Keep small edits within the existing design. Use an available host Visualize skill for conversation-only mechanism exploration or interaction previews when it helps; its output does not replace the final offline artifact. Establish shared typography, spacing, colors, selected/focus states and motion timing in the project's existing style source. Use a representative scene with real content and an adjacent transition to check a new direction, then expand it without inventing approval gates.
 
 ## 4. Implement the explanation
 
@@ -62,4 +62,4 @@ For maintenance or provenance, read [experience.md](references/experience.md) an
 
 ## Bundled skill resolution
 
-This release includes [six skills](references/bundled-skills.md): this lead, Impeccable, ImageGen, Playwright, GSAP core and GSAP timeline. Load a helper only when its specific capability is needed; not every briefing needs images, GSAP or every helper. Use the user's explicitly selected equivalent when available. Do not recommend installing removed writing, coding, academic or framework skill suites. Precise diagrams, charts and tables are handled through this lead's native HTML/SVG/data guidance. All helpers remain subordinate to user scope, evidence integrity and project rules.
+This release includes [13 entries](references/bundled-skills.md): this storytelling lead, Impeccable, UI UX Pro Max, ImageGen, Playwright and all eight GSAP modules. Visualize is a supported host companion, not redistributed. Load only relevant helpers: a static chart needs neither GSAP nor image generation, and vanilla HTML needs no framework modules. Keep generic writing/coding and academic publishing suites outside the workflow. Prefer an explicitly chosen existing equivalent. Precise diagrams, charts and tables use native HTML/SVG and the data guidance. All helpers remain subordinate to user scope, evidence integrity and project rules.

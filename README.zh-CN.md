@@ -7,26 +7,26 @@
 
 ![HTML Brifing：项目证据、清晰叙事与离线汇报](assets/cover.zh-CN.svg)
 
-通过 6 个聚焦于叙事、视觉设计、图像、演示动效和浏览器验收的技能，把项目材料做成有证据支撑的 HTML 汇报。适合需要解释工作机制与结果的技术团队、研究者和业务实践者。
+以叙事编排为核心，组合 Impeccable、UI UX Pro Max、ImageGen、GSAP 与宿主已有的 Visualize，把项目材料做成有证据支撑的 HTML 汇报。适合需要解释工作机制与结果的技术团队、研究者和业务实践者。
 
 **一个入口，保留已有技能，交付可查看、可操作的解释。**
 
-[安装](#1-安装) · [试用请求](#3-使用) · [下载 v0.4.0](https://github.com/thejaytang/html-brifing/releases/tag/v0.4.0) · [能力映射](plugins/html-brifing/skills/html-brifing/references/capabilities.md)
+[安装](#1-安装) · [试用请求](#3-使用) · [下载 v0.5.0](https://github.com/thejaytang/html-brifing/releases/tag/v0.5.0) · [能力映射](plugins/html-brifing/skills/html-brifing/references/capabilities.md)
 
 包内提供可移植的根级 `plugin.json`，并保留受支持的 Codex 兼容清单；这不等于已经验证跨宿主运行。标识符有意保留为 `html-brifing`。这是技能编排插件，不是幻灯片编辑器或自动依赖管理器。
 
 ## 1. 安装
 
-需要支持插件的 Codex、文件访问能力和已授权的项目工作区。实际渲染验收需要浏览器。插件一次安装 6 个核心技能。宿主服务和运行库仍需单独具备，只在任务需要时检查。
+需要支持插件的 Codex、文件访问能力和已授权的项目工作区。实际渲染验收需要浏览器。插件包含 13 个技能入口：主技能、4 个辅助技能和 GSAP 的 8 个模块。宿主服务和运行库仍需单独具备，只在任务需要时检查。
 
 ```sh
-codex plugin marketplace add thejaytang/html-brifing --ref v0.4.0
+codex plugin marketplace add thejaytang/html-brifing --ref v0.5.0
 codex plugin add html-brifing@html-brifing
 ```
 
 安装后开启**新聊天**，直接用 `$html-brifing` 提供材料与听众。它从汇报任务开始，在需要时检查工具。若需单独排查，说“使用 $html-brifing，只检查环境”。没有独立设置技能，也不要求每次先跑完整清单。已有个人技能保留，明确指定的同类技能优先使用。
 
-使用发布压缩包时，解压并进入 `html-brifing-0.4.0` 目录，然后运行：
+使用发布压缩包时，解压并进入 `html-brifing-0.5.0` 目录，然后运行：
 
 ```sh
 codex plugin marketplace add .
@@ -37,21 +37,24 @@ codex plugin add html-brifing@html-brifing
 
 ## 2. 插件实际包含什么
 
-**插件内置 6 个真实技能入口**，所需参考资料、脚本与许可一同打包。已有个人技能保留：明确指定已有版本时优先使用，否则主流程使用包内版本。
+**插件内置 13 个真实技能入口**，所需参考资料、脚本与许可一同打包。已有个人技能保留：明确指定已有版本时优先使用，否则主流程使用包内版本。
 
 | 内置工作流 | 入口数 | 来源与职责 |
 |---|---:|---|
-| HTML Brifing（含环境检查） | 1 | Jay Tang：叙事、证据、图解、组合统筹与交付验收 |
+| HTML Brifing | 1 | Jay Tang：叙事、证据、场景连续性、组合统筹与交付验收 |
 | Impeccable | 1 | [pbakaus](https://github.com/pbakaus/impeccable)：主视觉系统与视觉审查 |
+| UI UX Pro Max | 1 | [nextlevelbuilder](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)：可搜索的配色、字体、图表与交互参考 |
 | ImageGen | 1 | [OpenAI](https://github.com/openai/skills/blob/main/skills/.system/imagegen/SKILL.md)：图像生成、编辑规则与备用脚本 |
 | Playwright | 1 | [OpenAI](https://github.com/openai/skills/blob/main/skills/.curated/playwright/SKILL.md)：浏览器验收规则与命令包装脚本 |
-| GSAP core + timeline | 2 | [GreenSock](https://github.com/greensock/gsap-skills)：对象过渡与演讲者控制的动画序列 |
+| GSAP Skills | 8 | [GreenSock](https://github.com/greensock/gsap-skills)：core、timeline、scrolltrigger、performance、plugins、utils、react、frameworks，按需选择 |
 
-[全部 6 个入口](plugins/html-brifing/skills/html-brifing/references/bundled-skills.md) · [许可、来源和打包修改记录](plugins/html-brifing/THIRD_PARTY_NOTICES.md)
+[全部 13 个入口](plugins/html-brifing/skills/html-brifing/references/bundled-skills.md) · [许可、来源和打包修改记录](plugins/html-brifing/THIRD_PARTY_NOTICES.md)
 
-**插件专注于 HTML 汇报，不承担通用 Agent 工具箱的职责。** 0.4.0 移除了 Humanizer、Ponytail、学术写作与科研绘图/制表套件、重复设计参考和框架专用动效模块。普通写作与代码实现使用 Agent 已有能力；图表、表格和架构图由主流程的 HTML/SVG 与数据表达指南支持，无需补装专业套件。原有[业务经验沉淀](plugins/html-brifing/skills/html-brifing/references/experience.md)完整保留。
+**叙事编排由主技能负责。** 它确定听众需要理解什么，将主张与证据关联，按目的选择叙事结构，并安排每个场景为什么接在前一个之后。决策汇报、机制讲解、进展说明与平行项目不能强套同一模板。原有[业务经验沉淀](plugins/html-brifing/skills/html-brifing/references/experience.md)完整保留。
 
-需要图像表达时才加载 ImageGen，需要协调动效时才使用 GSAP。实际验收使用宿主允许的浏览器或 Playwright。技能文件不提供图像服务、浏览器、GSAP JavaScript 库或 Impeccable 引擎；缺少工具时在相关步骤说明，不静默安装。Visualize 不打包，也不是必备项。
+Impeccable 确定视觉方向；UI UX Pro Max 在该方向内提供具体参考；ImageGen 支持图像表达；GSAP 支持有解释作用的动效。**Visualize 通过宿主已有安装参与组合**，用于对话中的机制探索与交互预览。其原插件标注专有许可，公开包不复制源码。需要对话预览而宿主缺少它时，建议查看宿主官方插件目录；独立 HTML 交付不因此受阻。
+
+不要求每次调用全部技能：静态图表不需要 GSAP，原生 HTML 不需要 React 模块。普通写作、代码、图表与表格使用 Agent 已有能力和项目工具。Humanizer、Ponytail 与科研发表套件仍不打包。工具与运行库在需要时检查，不静默安装。
 
 ## 3. 使用
 
@@ -74,11 +77,14 @@ codex plugin add html-brifing@html-brifing
 
 | 能力 | 内置技能或宿主能力 | 提供什么 |
 |---|---|---|
+| 叙事编排 | 主技能的 storytelling 指南 | 听众目标、证据论证与场景连续性 |
 | 视觉系统 | Impeccable | 统一层级、布局、字体与状态 |
+| 设计参考 | UI UX Pro Max | 具体配色、字体、图表与交互选择 |
 | 数据图表与表格 | 原生 HTML/SVG 与项目已有图表工具 | 明确指标、忠实图表与核对后的结果表 |
 | 位图视觉表达 | ImageGen | 场景、对象、插画、图片编辑和透明素材 |
 | 精确关系表达 | 原生 HTML/SVG 与内置图解规则 | 可编辑标签、架构、字段映射和交互 |
-| 有解释作用的动效 | GSAP core + timeline | 对象连续性与联动状态 |
+| 有解释作用的动效 | 按需选择的 GSAP 模块 | 对象连续性与联动状态 |
+| 对话预览 | 宿主已有的 Visualize | 在正式制作前探索机制与交互 |
 | 验收 | 宿主浏览器工具或 Playwright | 实际渲染、操作与交付检查 |
 
 辅助技能缺失时采用已写明的基础路径。必要的浏览器或图像生成工具缺失时保留明确缺口。技能文件本身不提供模型、运行环境、凭据或服务权限；不得静默切换到付费 ImageGen API。
@@ -115,7 +121,7 @@ python3 scripts/check_package.py
 python3 -m unittest discover -s tests
 ```
 
-检查器与测试仅需 Python 3.10+ 标准库。可选锁定文件仅保留官方技能元数据验证器所需的 PyYAML。结构检查不代表浏览器行为通过。贡献前阅读 [AGENTS.md](AGENTS.md)、[当前状态](PROJECT_STATE.md)与[发布验证记录](project-support/evaluation-0.4.0.md)。问题复现说明应包含场景、状态、窗口尺寸与输入，不包含私人材料。
+检查器与测试仅需 Python 3.10+ 标准库。可选锁定文件仅保留官方技能元数据验证器所需的 PyYAML。结构检查不代表浏览器行为通过。贡献前阅读 [AGENTS.md](AGENTS.md)、[当前状态](PROJECT_STATE.md)与[发布验证记录](project-support/evaluation-0.5.0.md)。问题复现说明应包含场景、状态、窗口尺寸与输入，不包含私人材料。
 
 [来源与可选上游](plugins/html-brifing/skills/html-brifing/references/sources.md)区分借鉴来源、推荐技能和宿主文档。再分发的技能保留上游许可与署名；移出的技能套件也不列为补装建议。
 

@@ -2,11 +2,11 @@
 
 ## Actual bundled skills
 
-See [the six-entry inventory](bundled-skills.md) for every shipped entrypoint and [the installed-package notices](../../../THIRD_PARTY_NOTICES.md) for direct upstream links, licenses, source snapshots and adaptations. The repository's original work is MIT; redistributed skill files retain MIT or Apache-2.0 as listed.
+See [the 13-entry inventory](bundled-skills.md) for every shipped entrypoint and [the installed-package notices](../../../THIRD_PARTY_NOTICES.md) for direct upstream links, licenses, source snapshots and adaptations. The repository's original work is MIT; redistributed skill files retain MIT or Apache-2.0 as listed.
 
-Impeccable, ImageGen, Playwright and GSAP core/timeline are the selected helpers. Existing user installations are not overwritten. Version 0.4.0 removes the general-purpose, academic and framework skill suites from the active workflow. Their earlier provenance remains in immutable prior releases.
+Impeccable supplies design direction; UI UX Pro Max supplies focused design references; ImageGen supplies image guidance; all eight GSAP modules are available for task-based selection. Playwright supports final verification. Their snapshots are restored from the license-reviewed 0.3.1 bundle, not fetched as unreviewed upstream upgrades. Ordinary writing/coding and academic publishing suites remain excluded.
 
-Visualize is not required or bundled; its original manifest declares Proprietary. The lead creates standalone diagrams in native HTML/SVG. Host services and runtime libraries remain separate from skill files.
+Visualize is part of the intended collaboration when the host exposes it. Its original manifest declares Proprietary, so source/assets are not redistributed. Use it for conversation exploration or previews and keep the final HTML artifact separate. Host tools and runtime libraries remain separate from skill files.
 
 ## Earlier workflow influences
 

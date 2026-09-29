@@ -1,7 +1,7 @@
 {
   "name": "html-brifing",
-  "version": "0.4.0",
-  "description": "Focused HTML briefing workflow: evidence-led narrative, visual design, images, presenter-controlled motion and offline browser verification.",
+  "version": "0.5.0",
+  "description": "Storytelling-led HTML briefings with Impeccable, UI UX Pro Max, ImageGen, GSAP and browser verification; optional host Visualize previews.",
   "author": {
     "name": "Jay Tang",
     "url": "https://github.com/thejaytang"
@@ -9,8 +9,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "HTML Brifing",
-    "shortDescription": "Focused tools for clear, interactive HTML briefings",
-    "longDescription": "One briefing workflow plus Impeccable, ImageGen, Playwright and GSAP core/timeline. Keeps evidence, visual interaction and offline verification together. Uses the host agent for ordinary writing, coding, charts and tables; no general-purpose skill suite or mandatory setup checklist.",
+    "shortDescription": "Storytelling and visual tools for HTML briefings",
+    "longDescription": "One storytelling lead combines Impeccable, UI UX Pro Max, ImageGen and the eight GSAP modules as needed. Use host Visualize for conversation previews and browser tools or Playwright for final offline verification. Ordinary writing and coding use the agent\u2019s abilities. No mandatory full-suite execution.",
     "developerName": "Jay Tang",
     "category": "Productivity",
     "capabilities": [],

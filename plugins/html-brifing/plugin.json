@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "html-brifing",
-  "version": "0.4.0",
-  "description": "Focused HTML briefing workflow: evidence-led narrative, visual design, images, presenter-controlled motion and offline browser verification.",
+  "version": "0.5.0",
+  "description": "Storytelling-led HTML briefings with Impeccable, UI UX Pro Max, ImageGen, GSAP and browser verification; optional host Visualize previews.",
   "author": {
     "name": "Jay Tang",
     "url": "https://github.com/thejaytang"

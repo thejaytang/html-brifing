@@ -7,26 +7,26 @@
 
 ![HTML Brifing: project evidence, a clear story, an offline presentation](assets/cover.svg)
 
-Turn project materials into an evidence-led HTML briefing with six focused skills for narrative, visual design, images, presenter-controlled animation and browser QA. For technical teams, researchers and practitioners explaining how their work operates and what its results support.
+Turn project materials into an evidence-led HTML briefing with storytelling at its center and a focused visual combination: Impeccable, UI UX Pro Max, ImageGen and GSAP, plus optional host Visualize previews. For technical teams, researchers and practitioners explaining how their work operates and what its results support.
 
 **One entrypoint. Keep your existing skills. Deliver an explanation people can inspect.**
 
-[Install](#1-install) · [Try a request](#3-use-it) · [Download v0.4.0](https://github.com/thejaytang/html-brifing/releases/tag/v0.4.0) · [Capability map](plugins/html-brifing/skills/html-brifing/references/capabilities.md)
+[Install](#1-install) · [Try a request](#3-use-it) · [Download v0.5.0](https://github.com/thejaytang/html-brifing/releases/tag/v0.5.0) · [Capability map](plugins/html-brifing/skills/html-brifing/references/capabilities.md)
 
 The package has a portable root `plugin.json` and retains the supported Codex compatibility manifest. This format choice does not establish cross-host runtime compatibility. The identifier `html-brifing` is intentional. This is a skill orchestration plugin, not a slide editor or an automatic dependency manager.
 
 ## 1. Install
 
-Requires a Codex host with plugin support, file access and an authorized project workspace. A browser is needed to verify the rendered deliverable. The plugin installs the six focused workflow skills together. Host services and runtime libraries remain separate; the workflow checks them only when needed.
+Requires a Codex host with plugin support, file access and an authorized project workspace. A browser is needed to verify the rendered deliverable. The plugin installs 13 skill entries: the lead, four helpers and eight GSAP modules together. Host services and runtime libraries remain separate; the workflow checks them only when needed.
 
 ```sh
-codex plugin marketplace add thejaytang/html-brifing --ref v0.4.0
+codex plugin marketplace add thejaytang/html-brifing --ref v0.5.0
 codex plugin add html-brifing@html-brifing
 ```
 
 Start a **new chat** and invoke `$html-brifing` with your materials and audience. It starts with your briefing, checking tools when needed. For a standalone check, say “Use $html-brifing to check my environment only.” There is no separate setup skill or mandatory inventory before ordinary work. Existing personal skills remain intact; an explicitly chosen equivalent takes precedence.
 
-For a downloaded release, extract the archive, enter its `html-brifing-0.4.0` directory, then run:
+For a downloaded release, extract the archive, enter its `html-brifing-0.5.0` directory, then run:
 
 ```sh
 codex plugin marketplace add .
@@ -37,21 +37,24 @@ Use either installation route, not both. See [maintenance](docs/maintenance.md) 
 
 ## 2. What is actually included
 
-**Six skill entrypoints ship in this plugin.** Their required references, scripts and license notices are included. Existing personal skills are preserved: your explicitly chosen version wins, otherwise the lead uses the bundled copy.
+**13 skill entrypoints ship in this plugin.** Their required references, scripts and license notices are included. Existing personal skills are preserved: your explicitly chosen version wins, otherwise the lead uses the bundled copy.
 
 | Included workflow | Entries | Source and role |
 |---|---:|---|
-| HTML Brifing (including environment checks) | 1 | Jay Tang: narrative, evidence, diagrams, integration and final delivery checks |
+| HTML Brifing | 1 | Jay Tang: storytelling, evidence, scene continuity, integration and delivery checks |
 | Impeccable | 1 | [pbakaus](https://github.com/pbakaus/impeccable): main design system and visual review |
+| UI UX Pro Max | 1 | [nextlevelbuilder](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill): searchable palette, font, chart and interaction references |
 | ImageGen | 1 | [OpenAI](https://github.com/openai/skills/blob/main/skills/.system/imagegen/SKILL.md): image generation/editing instructions and fallback scripts |
 | Playwright | 1 | [OpenAI](https://github.com/openai/skills/blob/main/skills/.curated/playwright/SKILL.md): browser QA instructions and CLI wrapper |
-| GSAP core + timeline | 2 | [GreenSock](https://github.com/greensock/gsap-skills): object transitions and presenter-controlled sequences |
+| GSAP Skills | 8 | [GreenSock](https://github.com/greensock/gsap-skills): core, timeline, scrolltrigger, performance, plugins, utils, react and frameworks; select by need |
 
-[All six entrypoints](plugins/html-brifing/skills/html-brifing/references/bundled-skills.md) · [Licenses, sources and package adaptations](plugins/html-brifing/THIRD_PARTY_NOTICES.md)
+[All 13 entrypoints](plugins/html-brifing/skills/html-brifing/references/bundled-skills.md) · [Licenses, sources and package adaptations](plugins/html-brifing/THIRD_PARTY_NOTICES.md)
 
-**A focused briefing workflow, not a general agent toolkit.** Version 0.4.0 removes Humanizer, Ponytail, academic writing/plotting/tables, duplicate design references and framework-specific animation modules. Ordinary writing and coding use the host agent's existing abilities. Charts, tables and architecture diagrams use the lead's HTML/SVG/data guidance; no separate specialist suite is required. The original [business experience](plugins/html-brifing/skills/html-brifing/references/experience.md) remains intact.
+**Storytelling belongs to the lead.** It identifies the audience takeaway, connects claims to evidence, chooses a narrative shape for the purpose and plans why each scene follows the previous one. Decision briefs, mechanism explanations, progress reports and parallel projects need different structures. The original [business experience](plugins/html-brifing/skills/html-brifing/references/experience.md) remains intact.
 
-Load ImageGen only for useful imagery and GSAP only for meaningful coordinated motion. Use the host's permitted browser or Playwright for actual verification. Skills do not supply image-service access, a browser, the GSAP JavaScript runtime or the Impeccable engine. Missing tools are reported at the relevant step; nothing is installed silently. Visualize is neither bundled nor required.
+Impeccable sets visual direction; UI UX Pro Max provides focused references within that direction; ImageGen supplies useful imagery; GSAP supplies meaningful motion. **Visualize completes this combination through an existing host installation**, for conversation-only exploration and previews. Its original manifest is proprietary, so its source is not in this public package. If a requested chat preview needs it and it is unavailable, suggest the host's official plugin catalog; do not block standalone HTML delivery.
+
+The plugin does not require every helper on every task. Static charts need no GSAP, and vanilla HTML needs no React workflow. Ordinary writing, coding, charts and tables use the agent's competence and project tools. Humanizer, Ponytail and academic publishing suites remain excluded. Tools and runtime libraries are checked when needed, without silent installation.
 
 ## 3. Use it
 
@@ -74,11 +77,14 @@ The lead skill establishes the audience, argument and evidence. It chooses the r
 
 | Capability | Bundled helper / host capability | What it contributes |
 |---|---|---|
+| Narrative | The lead’s storytelling guidance | Audience takeaway, supported argument and scene continuity |
 | Visual system | Impeccable | Consistent hierarchy, layout, typography and states |
+| Design references | UI UX Pro Max | Targeted palette, typography, chart and interaction choices |
 | Data and tables | Native HTML/SVG and existing project chart tools | Defined metrics, faithful charts and reconciled tables |
 | Raster visual expression | ImageGen | Scenes, objects, illustrations, image edits and cutouts |
 | Precise relationships | Native HTML/SVG and the bundled diagram guidance | Editable labels, architecture, field mapping and interactions |
-| Meaningful motion | GSAP core + timeline | Object continuity and coordinated state changes |
+| Meaningful motion | Relevant GSAP modules | Object continuity and coordinated state changes |
+| Conversation preview | Host Visualize when available | Explore a mechanism or interaction before final implementation |
 | Verification | Host browser tools or Playwright | Actual rendering, interactions and delivery checks |
 
 Missing optional helpers use documented baselines. An unavailable required browser or image-generation tool remains an explicit gap. A skill file alone does not provide a model, runtime, credentials or service access. No silent paid ImageGen API fallback.
@@ -115,7 +121,7 @@ python3 scripts/check_package.py
 python3 -m unittest discover -s tests
 ```
 
-The checker and tests use Python 3.10+ standard library only. The optional lockfile contains PyYAML for the official skill metadata validator. Structural checks do not prove browser behavior. Read [AGENTS.md](AGENTS.md), [current state](PROJECT_STATE.md) and [release validation](project-support/evaluation-0.4.0.md) before contributing. Reproduction reports should identify the scene, state, viewport and input without private material.
+The checker and tests use Python 3.10+ standard library only. The optional lockfile contains PyYAML for the official skill metadata validator. Structural checks do not prove browser behavior. Read [AGENTS.md](AGENTS.md), [current state](PROJECT_STATE.md) and [release validation](project-support/evaluation-0.5.0.md) before contributing. Reproduction reports should identify the scene, state, viewport and input without private material.
 
 [Sources and optional upstreams](plugins/html-brifing/skills/html-brifing/references/sources.md) distinguish inspiration, recommended helpers and host documentation. Redistributed skills retain upstream licenses and credits; omitted suites are not installation recommendations.
 
