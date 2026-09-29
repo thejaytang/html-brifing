@@ -131,7 +131,7 @@ python3 -m venv .venv
 .venv/bin/python -m unittest discover -s tests
 ```
 
-The checker uses Python 3.10+ standard library only. The full test suite also exercises the bundled plotting helpers; the lockfile records the Python 3.12 macOS test environment. Use the equivalent virtual-environment executable on other systems, whose native acceptance is unverified. It validates package paths and resources, not browser behavior. Read [AGENTS.md](AGENTS.md), [current state](PROJECT_STATE.md) and [release validation](project-support/evaluation.md) before contributing. Reproduction reports should identify the scene, state, viewport and input without private material.
+The checker uses Python 3.10+ standard library only. The full test suite also exercises the bundled plotting helpers; the lockfile records the Python 3.12 macOS test environment. Use the equivalent virtual-environment executable on other systems, whose native acceptance is unverified. It validates package paths and resources, not browser behavior. Read [AGENTS.md](AGENTS.md), [current state](PROJECT_STATE.md) and [release validation](project-support/evaluation-0.2.0.md) before contributing. Reproduction reports should identify the scene, state, viewport and input without private material.
 
 [Sources and optional upstreams](plugins/html-brifing/skills/html-brifing/references/sources.md) distinguish inspiration, recommended helpers and host documentation. External companion skills remain separate; bundled author-maintained derivatives retain their upstream licenses and credits.
 

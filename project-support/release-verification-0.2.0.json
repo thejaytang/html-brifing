@@ -1,0 +1,14 @@
+{
+  "date": "2026-09-29",
+  "tag": "v0.2.0",
+  "commit": "d77d07e0b66ac34e539cdaeb2b801c6e7201405a",
+  "sha256": "3513fe297a32b21d6b05512e4c9c4091a7c93e04a58d9cc3e0437b3d16dd3f15",
+  "archiveFiles": 58,
+  "installedFiles": 34,
+  "checksum": "PASS",
+  "tagContentEquality": "PASS",
+  "downloadedArchiveInstall": "PASS",
+  "productionInstalledEquality": "PASS",
+  "installedSkillCount": 5,
+  "appUiVerification": "BLOCKED: computer-use tool prohibits access to Codex application"
+}

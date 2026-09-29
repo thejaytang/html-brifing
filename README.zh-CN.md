@@ -131,7 +131,7 @@ python3 -m venv .venv
 .venv/bin/python -m unittest discover -s tests
 ```
 
-检查工具只需要 Python 3.10+ 标准库。完整测试还会运行内置绘图脚本；锁文件记录本次 Python 3.12 macOS 测试环境。其他系统需使用对应的虚拟环境执行路径，原生验收尚未验证。结构检查不代替浏览器验收。贡献前阅读 [AGENTS.md](AGENTS.md)、[当前状态](PROJECT_STATE.md)和[发布验证记录](project-support/evaluation.md)。复现报告请说明场景、状态、窗口和输入，不附私有材料。
+检查工具只需要 Python 3.10+ 标准库。完整测试还会运行内置绘图脚本；锁文件记录本次 Python 3.12 macOS 测试环境。其他系统需使用对应的虚拟环境执行路径，原生验收尚未验证。结构检查不代替浏览器验收。贡献前阅读 [AGENTS.md](AGENTS.md)、[当前状态](PROJECT_STATE.md)和[发布验证记录](project-support/evaluation-0.2.0.md)。复现报告请说明场景、状态、窗口和输入，不附私有材料。
 
 [来源与可选上游](plugins/html-brifing/skills/html-brifing/references/sources.md)区分借鉴来源、推荐技能和宿主文档。外部配套技能保持独立；内置的作者维护衍生技能保留上游许可与署名。
 
