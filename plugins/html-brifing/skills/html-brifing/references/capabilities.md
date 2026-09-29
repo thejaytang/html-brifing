@@ -5,7 +5,7 @@ This is an orchestration contract interpreted by the agent, not an automatic dep
 ## Selection
 
 1. Check skills and tools exposed by the host. If a local skill is relevant, read its actual entrypoint and required references. Never hardcode another user's home path.
-2. Prefer the user's explicitly chosen existing helper. Otherwise use the bundled academic-humanizer, academic-research-plotting and research-results-tables for their jobs, then the recommended external helpers below or an available equivalent with the required inputs, outputs and evidence boundary. A matching name alone is insufficient.
+2. Prefer the user's explicitly selected existing helper; otherwise choose the real bundled entry from [the inventory](bundled-skills.md). All named workflow skills below are bundled except Visualize. A matching name does not establish the selected version or its runtime availability.
 3. Briefly state the helpers selected and any material gap. Do not require a routing report for a typo fix.
 4. If a helper is absent, use the supported baseline below. If a required capability is absent, complete independent work and identify the minimum missing step. Do not quietly change an explicitly requested medium or claim an unperformed check.
 5. Do not install, update, overwrite or remove other skills as a side effect of making a briefing. Obtain appropriate authorization for installation. Host and paid-service permissions remain in force.
@@ -37,8 +37,8 @@ Keep a compact record in the existing project plan/content model when the task w
 
 One lead workflow owns integration. A helper's attractive image, passing unit test or successful export does not establish whole-briefing acceptance. Resolve conflicting recommendations in favor of user instructions, factual fidelity, required function and accessibility before stylistic preferences. A polishing budget does not waive required tests.
 
-## Getting helpers
+## Bundle and runtime gaps
 
-The plugin bundles the author-maintained academic-humanizer, academic-research-plotting and research-results-tables with their required resources and original notices. Other recommended helpers remain external. Keep existing installations. On first use, the bundled html-brifing-setup skill recommends the full eight-group companion set and reports missing or unavailable capabilities; it installs nothing without authorization. See sources.md for verified public upstreams and product documentation. Visualize is host-provided; no standalone public source is asserted. There is no automatic skill dependency resolution here.
+Read [the bundled inventory](bundled-skills.md). All 19 entries and their resources ship in this plugin. Keep existing personal installations intact. On first use, html-brifing-setup verifies the bundle and checks runtime readiness. Missing packaged files are an incomplete installation; missing browser, image service, GSAP library or Python packages are separate runtime gaps. Recommend only what is actually absent and obtain appropriate authorization before installation. Visualize remains the sole external skill integration because the installed original is proprietary.
 
-Pin a helper version in project evidence when it materially affects reproducibility; otherwise record the helper actually used. Do not claim broad compatibility from one local combination.
+Sources, notices and adaptations are packaged in [THIRD_PARTY_NOTICES](../../../THIRD_PARTY_NOTICES.md). Pin runtime versions in project evidence when they materially affect reproducibility. Do not infer whole-briefing acceptance from a helper's local success.

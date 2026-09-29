@@ -1,0 +1,4 @@
+interface:
+  display_name: "GSAP Frameworks"
+  short_description: "GSAP animation guidance: frameworks"
+  default_prompt: "Use $gsap-frameworks for this HTML briefing task."

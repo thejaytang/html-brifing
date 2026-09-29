@@ -1,0 +1,4 @@
+interface:
+  display_name: "GSAP Timeline"
+  short_description: "GSAP animation guidance: timeline"
+  default_prompt: "Use $gsap-timeline for this HTML briefing task."

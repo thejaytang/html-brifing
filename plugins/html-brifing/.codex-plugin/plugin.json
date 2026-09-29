@@ -1,7 +1,7 @@
 {
   "name": "html-brifing",
-  "version": "0.2.0",
-  "description": "HTML briefings with bundled author-maintained writing, plotting and table skills, plus first-use companion setup.",
+  "version": "0.3.0",
+  "description": "Nineteen bundled skills for evidence-led HTML briefings: design, images, GSAP animation, writing, charts and browser QA.",
   "author": {
     "name": "Jay Tang",
     "url": "https://github.com/thejaytang"
@@ -9,8 +9,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "HTML Brifing",
-    "shortDescription": "Five skills for evidence-led HTML briefings.",
-    "longDescription": "Includes the HTML briefing lead, first-use setup, Academic Humanizer, Academic Research Plotting and Research Results Tables. Reuse existing companion skills and get a complete missing-skill checklist before installing anything.",
+    "shortDescription": "19 bundled skills for complete HTML briefings",
+    "longDescription": "Includes Impeccable, UI UX Pro Max, Humanizer, ImageGen, Playwright, Ponytail, all eight GSAP skills, academic writing/plotting/tables, and briefing coordination/setup. Keep existing skills; check host tools on first use. Visualize remains an optional proprietary host plugin.",
     "developerName": "Jay Tang",
     "category": "Productivity",
     "capabilities": [],
@@ -22,7 +22,7 @@
     "brandColor": "#126B61",
     "websiteURL": "https://github.com/thejaytang/html-brifing"
   },
-  "license": "MIT",
+  "license": "MIT AND Apache-2.0",
   "repository": "https://github.com/thejaytang/html-brifing",
   "homepage": "https://github.com/thejaytang/html-brifing",
   "keywords": [

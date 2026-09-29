@@ -1,0 +1,4 @@
+interface:
+  display_name: "Impeccable"
+  short_description: "Design, refine and review HTML interfaces"
+  default_prompt: "Use $impeccable for this HTML briefing task."

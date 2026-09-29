@@ -1,56 +1,34 @@
 ---
 name: html-brifing-setup
-description: Check a new HTML Brifing installation and recommend the complete companion skill set. Inventory bundled and already available capabilities, preserve existing skills, link verified installation sources, and install missing items only when authorized. Use on first setup, installation questions or an explicit capability refresh.
+description: Check the complete HTML Brifing bundle on first use. Verify its 19 included skills, preserve the user's existing versions, and identify missing host tools or runtimes. Use for first setup, installation questions or an explicit capability refresh; do not install anything merely because setup was requested.
 license: MIT
 ---
 
-# First-use setup
+# First-use check
 
-Help a new user obtain the full HTML briefing combination without replacing what they already have. This is a setup recommendation workflow, not an automatic installer. Ordinary plugin installation does not execute this skill; the first starter prompt and the briefing lead route users here.
+The plugin contains 19 real skill entrypoints. Read [the bundled inventory](../html-brifing/references/bundled-skills.md) and verify their paths. Users do not need separate skill downloads for those entries. Installation itself does not execute this workflow; the setup starter and lead skill route first-time users here.
 
-## Inspect the available capabilities
+## Inventory and duplicates
 
-Read the host's exposed skill/tool catalog and, when available, the installed plugin entry. Check only relevant capabilities; do not scan unrelated personal files. A skill can be installed but unavailable in the current chat; distinguish these states and suggest a new chat where appropriate. File presence does not prove its underlying tool or credentials work.
+Inspect the exposed skill/tool catalog and the plugin entry when available. Distinguish file-present, exposed in this chat, and functionally exercised. A same-name personal copy may coexist: preserve it, use the user's selected copy, otherwise use this plugin's bundled copy. Resolve the selected entrypoint and its resources from its actual directory. Do not guess which duplicate was loaded, delete a copy or upgrade an existing installation to standardize versions.
 
-Verify five bundled skill entrypoints relative to this file's parent skills directory:
+If the package lacks one of its 19 bundled entries, report an incomplete package and recommend reinstalling/updating HTML Brifing through the documented source; do not instruct users to assemble 17 separate downloads. A stale current chat may need a new chat before discovery updates.
 
-- html-brifing: narrative, visual composition and delivery coordination.
-- html-brifing-setup: this configuration check.
-- academic-humanizer: evidence-bound scholarly writing.
-- academic-research-plotting: quantitative charts, style, audit and export helpers.
-- research-results-tables: numerical reconciliation and explanatory result tables.
+## Runtime readiness
 
-The user does not need separate downloads for these. Existing copies remain intact. Prefer the user's explicitly selected existing version; otherwise the bundled copy is the default for these jobs. In a host with namespaced invocation, select this plugin's skill when necessary; when names are ambiguous, inspect the chosen entrypoint rather than guessing or deleting duplicates.
+Return a compact inventory grouped by role and a readiness table. Check only capabilities needed for this work; distinguish available, missing, unknown and installed-but-not-exposed. Recommend completing relevant missing runtimes, with the following boundaries:
 
-## Recommend the complete companion set
+- Impeccable: instructions, playbooks and launcher are bundled. Its separate platform engine may be present, or the upstream launcher may download its pinned version on first use. Preserve host permissions; do not enable hooks as a setup side effect. If engine execution is unavailable, follow the skill's documented direct-context fallback.
+- UI UX Pro Max: all local search data/scripts are bundled; Python is required to execute the search.
+- ImageGen: instructions, references and fallback scripts are bundled; the actual host image-generation tool must be available. Skill installation grants no service access. No paid API fallback without explicit user choice, and no secrets in chat.
+- Playwright: instructions and wrapper are bundled; a working host browser may satisfy QA instead. The wrapper needs Node/npx and can resolve the Playwright CLI on use. Check project/runtime permissions; do not install global tools automatically.
+- GSAP: all eight guidance modules are bundled. Add the GSAP library to the target project's isolated dependencies only when motion is needed and implementation is authorized; package runtime assets locally for offline delivery.
+- Academic plotting: scripts and presets are bundled; Matplotlib and any chart-specific libraries belong to the target project's isolated environment.
+- Humanizer, Academic Humanizer, Results Tables and Ponytail: instructions work without a separate service. Only load the workflows relevant to the current step. Ponytail cannot override the user's completeness, validation, communication or project rules.
+- Visualize: the sole external companion in this workflow. Its original plugin is proprietary and is not redistributed here. If available in the host, use it for chat previews. Otherwise recommend the host plugin directory without inventing a public repository or blocking standalone HTML work.
 
-Read [sources and companions](../html-brifing/references/sources.md). Recommend all eight companion groups for the full experience, including capabilities that are optional for a particular briefing:
+A setup recommendation does not authorize installing or updating runtimes, modifying host configuration or using paid services. For authorized installations use supported mechanisms, verify the result and distinguish installed from actually exercised.
 
-1. Impeccable: primary visual design and visual review.
-2. UI UX Pro Max: supplementary design and chart references.
-3. Humanizer: ordinary-language text finishing.
-4. GSAP Skills: coordinated motion; core, timeline and performance plus other modules when relevant.
-5. ImageGen: raster generation/editing with its underlying tool available.
-6. Playwright or the host browser equivalent: actual rendered and interactive verification.
-7. Ponytail: project-respecting simple implementation.
-8. Visualize: optional chat-native exploration; it does not create the final offline package.
+## One check, then work
 
-For each group report **available**, **installed but not exposed**, **missing**, or **unknown**, along with role, source and any required execution capability. Do not label an equivalent working browser missing merely because it has no Playwright skill name. Distinguish a recommended exact skill from a satisfied capability. Do not claim GSAP skills install the JS library or ImageGen instructions grant an image service.
-
-Return one concise table for bundled skills and one complete companion checklist. Mark what is already satisfied and recommend filling the remaining gaps. Explain that the full set is recommended, while individual tasks load only relevant helpers. Do not block independent work on optional companions.
-
-Use verified upstream links from sources.md. For host-bundled Visualize use the host's plugin directory; no standalone public skill source has been verified. Do not invent a package URL. If installation commands are needed, consult the actual upstream/host instructions for the user's platform instead of guessing them.
-
-## Authorization and existing installations
-
-A request to check or recommend does not authorize installation. Only install the missing items the user authorizes. Never reinstall, upgrade, replace or remove working existing skills merely to standardize versions. Check licenses, host support and tool requirements before recommending a specific installation path. Do not request secrets in chat or silently choose a paid image-generation route.
-
-Use the user's existing project/environment policy for runtime dependencies. Bundled Matplotlib helper scripts require Matplotlib; the plugin does not install Python packages. Reuse an appropriate isolated environment or explain what is missing.
-
-For an authorized installation, use supported host/skill installation mechanisms, verify installed files and clearly separate installed from functionally exercised. If fresh-chat discovery is required, say so rather than claiming this chat has refreshed.
-
-## Avoid repeat prompts
-
-Treat setup as complete for the current session once the inventory has been reported. Reuse an existing project setup note if supplied, and refresh it only on request or a relevant environment change. Do not repeatedly ask for all companions on each scene or small edit. Do not write a global setup flag or change host configuration just to record that a recommendation was shown.
-
-If only setup was requested, stop after the checklist or authorized installation. Do not start making a presentation. Respect explicit review-only and discussion-only scope.
+Once the inventory is reported, reuse it for the current session or supplied project setup note. Refresh only on request or a relevant environment change. Do not re-run the complete checklist for a title edit or every scene. Do not create a global setup flag. If only setup was requested, finish with the checklist; do not create a presentation.

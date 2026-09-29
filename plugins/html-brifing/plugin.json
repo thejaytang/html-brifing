@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "html-brifing",
+  "version": "0.3.0",
+  "description": "Nineteen bundled skills for evidence-led HTML briefings: design, images, GSAP animation, writing, charts and browser QA.",
+  "author": {
+    "name": "Jay Tang",
+    "url": "https://github.com/thejaytang"
+  },
+  "license": "MIT AND Apache-2.0",
+  "repository": "https://github.com/thejaytang/html-brifing",
+  "homepage": "https://github.com/thejaytang/html-brifing",
+  "keywords": [
+    "html",
+    "presentation",
+    "storytelling",
+    "skills",
+    "offline",
+    "imagegen"
+  ]
+}

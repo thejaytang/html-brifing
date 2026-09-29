@@ -1,33 +1,16 @@
 # Sources, roles and licensing
 
-## Bundled skills
+## Actual bundled skills
 
-Five actual skill entrypoints ship inside the plugin. The first two are original coordination guidance by Jay Tang. The three author-maintained skills retain their runtime resources and notices; upstream projects remain independently maintained.
+See [the 19-entry inventory](bundled-skills.md) for every shipped entrypoint and [the installed-package notices](../../../THIRD_PARTY_NOTICES.md) for direct upstream links, licenses, source snapshots and adaptations. The repository's original work is MIT; redistributed skill files retain MIT or Apache-2.0 as listed.
 
-| Skill | Maintainer/source | Redistribution |
-|---|---|---|
-| HTML Brifing | Jay Tang; this repository | MIT |
-| HTML Brifing Setup | Jay Tang; this repository | MIT |
-| [Academic Humanizer](https://github.com/thejaytang/academic-humanizer) | thejaytang, incorporating credited upstream work | MIT; preserve the bundled [license and provenance](../../academic-humanizer/LICENSE), including AIScientists-Dev and Kiterlin notices |
-| [Academic Research Plotting](https://github.com/thejaytang/academic-research-plotting) | thejaytang / Academic Research Plotting contributors | Preserve the bundled [MIT license](../../academic-research-plotting/LICENSE) |
-| [Research Results Tables](../../research-results-tables/SKILL.md) | Jay Tang; first bundled public snapshot | [MIT](../../research-results-tables/LICENSE) |
+Impeccable, UI UX Pro Max, Humanizer, ImageGen, Playwright, Ponytail and all eight GSAP modules are copied into this plugin with their needed skill resources. Academic Humanizer, Academic Research Plotting and Research Results Tables remain bundled. Existing user installations are not overwritten.
 
-The source snapshot record is in the repository's project-support/bundled-sources.json. No private business documents or source-project screenshots are bundled. Author-maintained does not mean all underlying work was solely authored by the maintainer.
+## External host integration
 
-## Recommended external companion set
+Visualize's installed OpenAI plugin manifest declares Proprietary. No public redistribution grant was established, so its source/assets are excluded. Reuse it when exposed by the host, or use native HTML/SVG for standalone explanations. Do not invent a standalone download URL.
 
-These eight companion groups are recommended at first use. They are not bundled or installed automatically. Keep working existing copies. Names describe integrations, not endorsement. Follow each upstream's installation instructions and terms; skill instructions alone do not supply runtimes or service access.
-
-| Companion | Author/provider and actual source | Role and boundary |
-|---|---|---|
-| Impeccable | [pbakaus/impeccable](https://github.com/pbakaus/impeccable) | Primary design and visual review; external Apache-2.0 project |
-| UI UX Pro Max | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | Supplementary typography, palettes and chart references |
-| Humanizer | [blader/humanizer](https://github.com/blader/humanizer) | General prose; distinct from the bundled scholarly workflow |
-| GSAP Skills | [GreenSock/gsap-skills](https://github.com/greensock/gsap-skills) | Core, timeline, performance and relevant modules; JS library installation and terms remain separate |
-| ImageGen | [OpenAI imagegen skill](https://github.com/openai/skills/blob/main/skills/.system/imagegen/SKILL.md) | Image generation/editing; verify the host image tool. No credentials or silent paid API fallback supplied |
-| Playwright / equivalent browser | [OpenAI Playwright skill](https://github.com/openai/skills/blob/main/skills/.curated/playwright/SKILL.md), [Playwright project](https://playwright.dev/) | Rendered QA; a working host browser can satisfy this capability |
-| Ponytail | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | Simple complete implementation subject to user/project rules |
-| Visualize | OpenAI host-provided plugin, through the host's plugin directory | Chat-native exploration; no verified standalone public repository is asserted, and it does not replace the final offline artifact |
+Skill redistribution does not bundle image-generation service access, host browser APIs, GSAP JavaScript, Python dependencies or an Impeccable platform engine binary. Check these separately through first-use setup.
 
 ## Earlier workflow influences
 
@@ -42,7 +25,7 @@ The author's earlier skill recorded these influences. Their scope is retained he
 ## Host and format references
 
 - [OpenAI: build skills](https://developers.openai.com/plugins/build/skills): related skills, resources and behavior evaluation.
-- [OpenAI: package plugins](https://developers.openai.com/plugins/build/plugins): this release uses .codex-plugin/plugin.json and a repository marketplace.
+- [OpenAI: package plugins](https://developers.openai.com/plugins/build/plugins): this release includes portable root plugin.json plus the supported .codex-plugin/plugin.json compatibility overlay and a repository marketplace.
 - [Agent Skills specification](https://agentskills.io/specification): format compliance is not proof of runtime portability.
 
 The repository's MIT license covers its original guidance, assets and checker. Bundled derived work retains its own notices. External libraries, generated assets and host services retain their respective terms.

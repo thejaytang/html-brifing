@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Check local package structure/resources; not a browser or security audit."""
+import hashlib
 import json
 import re
 import sys
@@ -37,25 +38,35 @@ def check(root):
         plugin = local(root, entry['source']['path'])
         assert plugin is not None
         manifest = json.loads((plugin / '.codex-plugin/plugin.json').read_text())
-        assert manifest['name'] == 'html-brifing' and manifest['license'] == 'MIT'
+        portable = json.loads((plugin / 'plugin.json').read_text())
+        for field in ('name', 'version', 'description', 'license', 'repository'):
+            assert portable[field] == manifest[field], f'Portable/compatibility mismatch: {field}'
+        assert portable['$schema'] == 'https://agent-plugins.org/schemas/1.0.0/plugin.schema.json'
+        assert manifest['name'] == 'html-brifing' and manifest['license'] == 'MIT AND Apache-2.0'
         assert re.fullmatch(r'\d+\.\d+\.\d+(?:\+[0-9A-Za-z.-]+)?', manifest['version'])
         assert manifest['skills'].startswith('./') and '..' not in Path(manifest['skills']).parts
         skills = local(plugin, manifest['skills'])
         assert skills and skills.is_relative_to(root)
-        expected = {'html-brifing', 'html-brifing-setup', 'academic-humanizer',
-                    'academic-research-plotting', 'research-results-tables'}
+        bundle = json.loads((plugin / 'bundle.json').read_text())
+        assert bundle['version'] == manifest['version'], 'Bundle version mismatch'
+        imported = {item['skill']: item for item in bundle['bundled']}
+        expected = set(bundle['coordinationSkills']) | set(imported)
+        assert len(expected) == 19 and len(imported) == 17, 'Incomplete declared bundle'
         actual = {p.parent.name for p in skills.glob('*/SKILL.md')}
         assert actual == expected, f'Skill inventory: expected {sorted(expected)}, got {sorted(actual)}'
         for name in expected:
-            skill = skills / name / 'SKILL.md'
-            assert skill.read_text().startswith(f'---\nname: {name}\n'), f'Wrong skill name: {name}'
+            entry = skills / name / 'SKILL.md'
+            match = re.search(r'^name:\s*["\']?([a-z0-9-]+)["\']?\s*$', entry.read_text().split('---', 2)[1], re.M)
+            assert match and match.group(1) == name, f'Wrong skill name: {name}'
             assert (skills / name / 'agents/openai.yaml').is_file(), f'Missing UI metadata: {name}'
-        snapshots = json.loads((root / 'project-support/bundled-sources.json').read_text())
-        assert {s['skill'] for s in snapshots} == expected - {'html-brifing', 'html-brifing-setup'}
-        for snapshot in snapshots:
-            for resource in set(snapshot['sourceFileSha256']) | {'LICENSE'}:
-                path = local(skills / snapshot['skill'], resource)
-                assert path and path.is_file(), f'Missing bundled resource: {resource}'
+        for name, record in imported.items():
+            base = skills / name
+            assert record['license'] in {'MIT', 'Apache-2.0'}, f'Unreviewed license: {name}'
+            assert record['licenseFile'] in record['files'], f'Missing license record: {name}'
+            for resource, digest in record['files'].items():
+                path = local(base, resource)
+                assert path and path.is_file(), f'Missing bundled resource: {name}/{resource}'
+                assert hashlib.sha256(path.read_bytes()).hexdigest() == digest, f'Changed bundled resource without provenance update: {name}/{resource}'
     except (AssertionError, KeyError, ValueError, TypeError, OSError) as exc:
         fail(f'Invalid package/skill manifest: {exc}')
 
@@ -70,6 +81,9 @@ def check(root):
             continue
         if path.suffix == '.md':
             text = path.read_text()
+            # Documentation examples are not package resources.
+            text = re.sub(r'^(`{3,}|~{3,}).*?^\1[^\n]*$', '', text, flags=re.M | re.S)
+            text = re.sub(r'`+[^`\n]*`+', '', text)
             targets = re.findall(r'!?\[[^\]]*\]\(([^\s)]+)\)', text)
             targets += re.findall(r'(?:href|src)=[\'"]([^\'"]+)[\'"]', text)
             for target in targets:

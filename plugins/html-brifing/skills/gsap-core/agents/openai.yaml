@@ -1,0 +1,4 @@
+interface:
+  display_name: "GSAP Core"
+  short_description: "GSAP animation guidance: core"
+  default_prompt: "Use $gsap-core for this HTML briefing task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "GSAP Performance"
+  short_description: "GSAP animation guidance: performance"
+  default_prompt: "Use $gsap-performance for this HTML briefing task."

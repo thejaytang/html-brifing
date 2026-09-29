@@ -1,0 +1,4 @@
+interface:
+  display_name: "UI UX Pro Max"
+  short_description: "Search design, palette and chart references"
+  default_prompt: "Use $ui-ux-pro-max for this HTML briefing task."
