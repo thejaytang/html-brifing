@@ -1,0 +1,13 @@
+{
+  "date": "2026-09-29",
+  "tag": "v0.4.0",
+  "commit": "92b56af154f127dda3dd763f86d8bb8426d8cb4d",
+  "sha256": "1db08d1eca64551f8b38dfdbc5db8f7d6bcbedd1447288ba6a00b596bab4b061",
+  "archiveFiles": 136,
+  "installedFiles": 106,
+  "checksum": "PASS",
+  "tagContentEquality": "PASS",
+  "downloadedArchiveInstall": "PASS",
+  "productionInstalledEquality": "PASS",
+  "installedSkillCount": 6
+}
