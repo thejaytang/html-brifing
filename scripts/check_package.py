@@ -52,7 +52,7 @@ def check(root):
         imported = {item['skill']: item for item in bundle['bundled']}
         expected = set(bundle['coordinationSkills']) | set(imported)
         assert bundle['coordinationSkills'] == ['html-brifing'], 'Use one briefing coordination entrypoint'
-        assert len(expected) == 18 and len(imported) == 17, 'Incomplete declared bundle'
+        assert expected == {'html-brifing', 'impeccable', 'imagegen', 'playwright', 'gsap-core', 'gsap-timeline'} and len(imported) == 5, 'Incomplete declared bundle'
         actual = {p.parent.name for p in skills.glob('*/SKILL.md')}
         assert actual == expected, f'Skill inventory: expected {sorted(expected)}, got {sorted(actual)}'
         for name in expected:

@@ -1,4 +1,0 @@
-interface:
-  display_name: "GSAP Utils"
-  short_description: "GSAP animation guidance: utils"
-  default_prompt: "Use $gsap-utils for this HTML briefing task."

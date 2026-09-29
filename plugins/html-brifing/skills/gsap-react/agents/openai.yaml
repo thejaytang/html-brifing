@@ -1,4 +1,0 @@
-interface:
-  display_name: "GSAP React"
-  short_description: "GSAP animation guidance: react"
-  default_prompt: "Use $gsap-react for this HTML briefing task."

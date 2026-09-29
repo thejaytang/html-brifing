@@ -1,7 +1,7 @@
 {
   "name": "html-brifing",
-  "version": "0.3.1",
-  "description": "Eighteen bundled skills for evidence-led HTML briefings: design, images, GSAP animation, writing, charts and browser QA.",
+  "version": "0.4.0",
+  "description": "Focused HTML briefing workflow: evidence-led narrative, visual design, images, presenter-controlled motion and offline browser verification.",
   "author": {
     "name": "Jay Tang",
     "url": "https://github.com/thejaytang"
@@ -9,8 +9,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "HTML Brifing",
-    "shortDescription": "18 bundled skills for complete HTML briefings",
-    "longDescription": "Includes Impeccable, UI UX Pro Max, Humanizer, ImageGen, Playwright, Ponytail, all eight GSAP skills, academic writing/plotting/tables, and briefing coordination with internal environment checks. Keep existing skills; check host tools on first use. Visualize remains an optional proprietary host plugin.",
+    "shortDescription": "Focused tools for clear, interactive HTML briefings",
+    "longDescription": "One briefing workflow plus Impeccable, ImageGen, Playwright and GSAP core/timeline. Keeps evidence, visual interaction and offline verification together. Uses the host agent for ordinary writing, coding, charts and tables; no general-purpose skill suite or mandatory setup checklist.",
     "developerName": "Jay Tang",
     "category": "Productivity",
     "capabilities": [],

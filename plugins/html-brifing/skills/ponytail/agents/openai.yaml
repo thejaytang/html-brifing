@@ -1,4 +1,0 @@
-interface:
-  display_name: "Ponytail"
-  short_description: "Keep code simple, complete and verified"
-  default_prompt: "Use $ponytail for this HTML briefing task."

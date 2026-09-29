@@ -5,7 +5,7 @@ This is an orchestration contract interpreted by the agent, not an automatic dep
 ## Selection
 
 1. Check skills and tools exposed by the host. If a local skill is relevant, read its actual entrypoint and required references. Never hardcode another user's home path.
-2. Prefer the user's explicitly selected existing helper; otherwise choose the real bundled entry from [the inventory](bundled-skills.md). All named workflow skills below are bundled except Visualize. A matching name does not establish the selected version or its runtime availability.
+2. Prefer the user's explicitly selected existing helper; otherwise choose the real bundled entry from [the inventory](bundled-skills.md). The five helper entries in the inventory are the entire bundled set; ordinary agent capabilities need no skill wrapper. A matching name does not establish the selected version or its runtime availability.
 3. Briefly state the helpers selected and any material gap. Do not require a routing report for a typo fix.
 4. If a helper is absent, use the supported baseline below. If a required capability is absent, complete independent work and identify the minimum missing step. Do not quietly change an explicitly requested medium or claim an unperformed check.
 5. Do not install, update, overwrite or remove other skills as a side effect of making a briefing. Obtain appropriate authorization for installation. Host and paid-service permissions remain in force.
@@ -13,16 +13,11 @@ This is an orchestration contract interpreted by the agent, not an automatic dep
 | Job and trigger | Recommended available helper | Input → expected output | Baseline / boundary |
 |---|---|---|---|
 | New visual direction or substantial layout work | Impeccable | Audience, real scene, brand → coherent layout and reusable visual rules | Apply the bundled visual guidance with native HTML/CSS/SVG |
-| Specific typography, palette or chart reference gap | UI UX Pro Max | A focused design question → reference to fit the existing direction | Do not generate a competing second design system |
-| Quantitative evidence | academic-research-plotting; available data-visualization equivalent | Data, definitions, source and intended comparison → appropriate plot with units and uncertainty | Follow data-visualization.md; simple native graphics are sufficient where accurate |
-| Empirical result tables | research-results-tables | Actual analysis output → reconciled, readable table with notes | A plain semantic HTML table is sufficient; do not infer missing estimates |
-| Coordinated motion | GSAP core / timeline / scrolltrigger / performance as needed | Object identity and state transitions → controlled motion with stable reduced-motion state | CSS/native animation or static comparison; keep the presenter in control |
+| Quantitative evidence | Native HTML/SVG or existing project chart tools | Data, definitions, source and intended comparison → appropriate plot with units and uncertainty | Follow data-visualization.md; simple native graphics are sufficient where accurate |
+| Empirical result tables | Semantic HTML tables | Actual analysis output → reconciled, readable table with notes | A plain semantic HTML table is sufficient; do not infer missing estimates |
+| Coordinated motion | GSAP core / timeline only when coordinated motion is needed | Object identity and state transitions → controlled motion with stable reduced-motion state | CSS/native animation or static comparison; keep the presenter in control |
 | Raster scene, illustration, cutout or image edit | imagegen | Purpose, composition, source roles and invariants → inspected final image in deliverable assets | Built-in image tool when available; no silent paid API fallback or fake screenshot |
-| General prose finish | humanizer | Evidence-bound titles and explanations → natural copy with meaning preserved | Perform a concise prose check; no required diagnostic dump |
-| Scholarly text | academic-humanizer or applicable equivalent | Claims, sources, author intent → faithful scholarly wording | Do not stack a second full general-humanizer workflow |
-| Actual code implementation | Project's coding guidance; Ponytail when installed | Required behavior and existing architecture → smallest complete implementation | Simplicity never overrides accessibility, isolation or required tests |
 | Rendered behavior and final-file QA | Host browser tools; playwright when appropriate | Final entrypoint, state sequence and viewports → observed results and evidence | If unavailable, static review only; browser acceptance remains NOT_RUN |
-| Chat-only interactive explanation | visualize when available | Question or interaction idea → conversation preview | Not the final offline HTML package |
 
 ## Shared handoff contract
 
@@ -39,6 +34,6 @@ One lead workflow owns integration. A helper's attractive image, passing unit te
 
 ## Bundle and runtime gaps
 
-Read [the bundled inventory](bundled-skills.md). All 18 entries and their resources ship in this plugin. Keep existing personal installations intact. On first use, the lead loads [its internal environment check](setup.md) for the capabilities needed by the task. Missing packaged files are an incomplete installation; missing browser, image service, GSAP library or Python packages are separate runtime gaps. Recommend only what is actually absent and obtain appropriate authorization before installation. Visualize remains the sole external skill integration because the installed original is proprietary.
+Read [the six-entry inventory](bundled-skills.md) only when resolving a helper or diagnosing the package. Preserve personal installations. Check tools at the point of use; read [environment checks](setup.md) for a real gap or an explicit check request. Missing skill files indicate an incomplete installation. Missing image tools, a browser or a required runtime is a separate capability gap. Do not suggest installing a general writing, coding or academic skill suite.
 
 Sources, notices and adaptations are packaged in [THIRD_PARTY_NOTICES](../../../THIRD_PARTY_NOTICES.md). Pin runtime versions in project evidence when they materially affect reproducibility. Do not infer whole-briefing acceptance from a helper's local success.

@@ -2,15 +2,11 @@
 
 ## Actual bundled skills
 
-See [the 18-entry inventory](bundled-skills.md) for every shipped entrypoint and [the installed-package notices](../../../THIRD_PARTY_NOTICES.md) for direct upstream links, licenses, source snapshots and adaptations. The repository's original work is MIT; redistributed skill files retain MIT or Apache-2.0 as listed.
+See [the six-entry inventory](bundled-skills.md) for every shipped entrypoint and [the installed-package notices](../../../THIRD_PARTY_NOTICES.md) for direct upstream links, licenses, source snapshots and adaptations. The repository's original work is MIT; redistributed skill files retain MIT or Apache-2.0 as listed.
 
-Impeccable, UI UX Pro Max, Humanizer, ImageGen, Playwright, Ponytail and all eight GSAP modules are copied into this plugin with their needed skill resources. Academic Humanizer, Academic Research Plotting and Research Results Tables remain bundled. Existing user installations are not overwritten.
+Impeccable, ImageGen, Playwright and GSAP core/timeline are the selected helpers. Existing user installations are not overwritten. Version 0.4.0 removes the general-purpose, academic and framework skill suites from the active workflow. Their earlier provenance remains in immutable prior releases.
 
-## External host integration
-
-Visualize's installed OpenAI plugin manifest declares Proprietary. No public redistribution grant was established, so its source/assets are excluded. Reuse it when exposed by the host, or use native HTML/SVG for standalone explanations. Do not invent a standalone download URL.
-
-Skill redistribution does not bundle image-generation service access, host browser APIs, GSAP JavaScript, Python dependencies or an Impeccable platform engine binary. Check these separately through first-use setup.
+Visualize is not required or bundled; its original manifest declares Proprietary. The lead creates standalone diagrams in native HTML/SVG. Host services and runtime libraries remain separate from skill files.
 
 ## Earlier workflow influences
 

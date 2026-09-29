@@ -1,30 +1,16 @@
-# The 18 included skills
+# The six included skills
 
-These are real directories in this plugin, not installation suggestions. The user's explicitly chosen existing copy takes precedence; otherwise use the bundled copy. Resolve each skill from the directory linked here. Load only the relevant workflow.
+One briefing coordinator and five focused helpers. Use only those needed for the current task; preserve an explicitly selected personal equivalent.
 
 | Entry | Role |
 |---|---|
-| [html-brifing](../../html-brifing/SKILL.md) | Narrative, evidence and delivery coordination |
-| [academic-humanizer](../../academic-humanizer/SKILL.md) | Scholarly prose |
-| [academic-research-plotting](../../academic-research-plotting/SKILL.md) | Scientific charts, audits and exports |
-| [gsap-core](../../gsap-core/SKILL.md) | GSAP core |
-| [gsap-frameworks](../../gsap-frameworks/SKILL.md) | GSAP frameworks |
-| [gsap-performance](../../gsap-performance/SKILL.md) | GSAP performance |
-| [gsap-plugins](../../gsap-plugins/SKILL.md) | GSAP plugins |
-| [gsap-react](../../gsap-react/SKILL.md) | GSAP react |
-| [gsap-scrolltrigger](../../gsap-scrolltrigger/SKILL.md) | GSAP scrolltrigger |
-| [gsap-timeline](../../gsap-timeline/SKILL.md) | GSAP timeline |
-| [gsap-utils](../../gsap-utils/SKILL.md) | GSAP utils |
-| [humanizer](../../humanizer/SKILL.md) | General prose |
+| [html-brifing](../../html-brifing/SKILL.md) | Narrative, evidence, diagrams, charts and delivery coordination |
+| [impeccable](../../impeccable/SKILL.md) | Visual design and review |
 | [imagegen](../../imagegen/SKILL.md) | Raster generation and editing |
-| [impeccable](../../impeccable/SKILL.md) | Design system and visual review |
-| [playwright](../../playwright/SKILL.md) | Rendered browser QA |
-| [ponytail](../../ponytail/SKILL.md) | Simple complete implementation |
-| [research-results-tables](../../research-results-tables/SKILL.md) | Numerical result tables |
-| [ui-ux-pro-max](../../ui-ux-pro-max/SKILL.md) | Design and chart-reference search |
+| [playwright](../../playwright/SKILL.md) | Browser verification when host tools do not suffice |
+| [gsap-core](../../gsap-core/SKILL.md) | Meaningful DOM/SVG transitions |
+| [gsap-timeline](../../gsap-timeline/SKILL.md) | Presenter-controlled sequences |
 
-[Provenance, licenses and adaptations](../../../THIRD_PARTY_NOTICES.md) travel with the installed plugin. Machine-readable integrity inventory: `../../../bundle.json`.
+[Sources and licenses](../../../THIRD_PARTY_NOTICES.md) and [file hashes](../../../bundle.json) travel with the package.
 
-Visualize is the only external skill integration. Its installed manifest declares Proprietary; its original source is not in this bundle. Reuse an available host installation, or use the lead skill's native HTML/SVG path for standalone explanations.
-
-Skill files do not include host tools, image-service access, GSAP JS, browsers, Matplotlib, Node or the Impeccable engine binary. First-use setup reports these runtime gaps separately.
+General writing, coding, academic publishing and framework-specific workflows are outside this bundle. Charts, tables and architecture diagrams use the lead’s existing HTML/SVG/data guidance. The bundle does not include host services, browsers, the GSAP runtime or the Impeccable engine.

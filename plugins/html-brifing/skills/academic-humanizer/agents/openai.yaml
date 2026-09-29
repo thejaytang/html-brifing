@@ -1,4 +1,0 @@
-interface:
-  display_name: "Academic Humanizer"
-  short_description: "Direct, evidence-bound academic editing and audit"
-  default_prompt: "Use $academic-humanizer to revise this academic text with minimal edits, remove defensive framing, preserve evidence, and match my voice and target venue."

@@ -1,6 +1,6 @@
 # Quantitative evidence in a briefing
 
-Use available plotting or results-table skills when the scene contains measured data. Adapt publication-oriented output for projection; tiny journal text is not a presentation default.
+Create charts and tables directly using the project’s existing tools and the guidance below. A separate plotting or results-table skill is not required. Use readable projection sizes rather than tiny journal text.
 
 ## Define the comparison
 

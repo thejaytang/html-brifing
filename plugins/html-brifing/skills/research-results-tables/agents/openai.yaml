@@ -1,4 +1,0 @@
-interface:
-  display_name: "Research Results Tables"
-  short_description: "Build and audit publication-ready empirical tables."
-  default_prompt: "Use $research-results-tables to create or audit the descriptive and regression tables for this research project."

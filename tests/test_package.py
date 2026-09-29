@@ -22,9 +22,9 @@ class PackageChecks(unittest.TestCase):
     def test_valid_package(self):
         self.assertEqual(checker.check(self.root), [])
 
-    def test_reintroduced_setup_entry(self):
+    def test_reintroduced_unrelated_skill(self):
         skills = self.root / 'plugins/html-brifing/skills'
-        shutil.copytree(skills / 'html-brifing', skills / 'html-brifing-setup')
+        shutil.copytree(skills / 'html-brifing', skills / 'humanizer')
         self.assertTrue(checker.check(self.root))
 
     def test_missing_skill(self):
@@ -32,15 +32,15 @@ class PackageChecks(unittest.TestCase):
         self.assertTrue(checker.check(self.root))
 
     def test_missing_bundled_entry(self):
-        (self.root / 'plugins/html-brifing/skills/research-results-tables/SKILL.md').unlink()
+        (self.root / 'plugins/html-brifing/skills/imagegen/SKILL.md').unlink()
         self.assertTrue(checker.check(self.root))
 
-    def test_missing_plot_preset(self):
-        (self.root / 'plugins/html-brifing/skills/academic-research-plotting/assets/journal_presets.json').unlink()
+    def test_missing_image_reference(self):
+        (self.root / 'plugins/html-brifing/skills/imagegen/references/cli.md').unlink()
         self.assertTrue(checker.check(self.root))
 
     def test_missing_upstream_notice(self):
-        (self.root / 'plugins/html-brifing/skills/academic-humanizer/LICENSE').unlink()
+        (self.root / 'plugins/html-brifing/skills/imagegen/LICENSE.txt').unlink()
         self.assertTrue(checker.check(self.root))
 
     def test_missing_gsap_module(self):
@@ -48,7 +48,7 @@ class PackageChecks(unittest.TestCase):
         self.assertTrue(checker.check(self.root))
 
     def test_modified_bundled_script(self):
-        target = self.root / 'plugins/html-brifing/skills/ui-ux-pro-max/scripts/search.py'
+        target = self.root / 'plugins/html-brifing/skills/imagegen/scripts/image_gen.py'
         target.write_text('print("changed")')
         self.assertTrue(checker.check(self.root))
 
