@@ -1,0 +1,54 @@
+[
+  {
+    "name": "Default view exposes both routing outcomes and no detail",
+    "status": "PASS"
+  },
+  {
+    "name": "Select A shows matching detail",
+    "status": "PASS"
+  },
+  {
+    "name": "Repeat A clears disclosure",
+    "status": "PASS"
+  },
+  {
+    "name": "B replaces A without stale selection",
+    "status": "PASS"
+  },
+  {
+    "name": "Close resets and restores focus",
+    "status": "PASS"
+  },
+  {
+    "name": "Return overview resets all state",
+    "status": "PASS"
+  },
+  {
+    "name": "Keyboard activation expands object",
+    "status": "PASS"
+  },
+  {
+    "name": "No horizontal overflow at 1920x1080",
+    "status": "PASS"
+  },
+  {
+    "name": "No horizontal overflow at 1366x768",
+    "status": "PASS"
+  },
+  {
+    "name": "No horizontal overflow at 900x500",
+    "status": "PASS"
+  },
+  {
+    "name": "No horizontal overflow at 420x700",
+    "status": "PASS"
+  },
+  {
+    "name": "Moved final copy operates offline over file protocol",
+    "status": "PASS"
+  },
+  {
+    "name": "No runtime exception",
+    "status": "PASS"
+  }
+]

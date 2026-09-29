@@ -1,0 +1,20 @@
+{
+  "name": "html-brifing",
+  "interface": {
+    "displayName": "Html Brifing"
+  },
+  "plugins": [
+    {
+      "name": "html-brifing",
+      "source": {
+        "source": "local",
+        "path": "./plugins/html-brifing"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
