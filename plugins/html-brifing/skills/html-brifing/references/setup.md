@@ -1,18 +1,12 @@
----
-name: html-brifing-setup
-description: Check the complete HTML Brifing bundle on first use. Verify its 19 included skills, preserve the user's existing versions, and identify missing host tools or runtimes. Use for first setup, installation questions or an explicit capability refresh; do not install anything merely because setup was requested.
-license: MIT
----
-
 # First-use check
 
-The plugin contains 19 real skill entrypoints. Read [the bundled inventory](../html-brifing/references/bundled-skills.md) and verify their paths. Users do not need separate skill downloads for those entries. Installation itself does not execute this workflow; the setup starter and lead skill route first-time users here.
+The plugin contains 18 real skill entrypoints. Read [the bundled inventory](bundled-skills.md) and verify their paths. Users do not need separate skill downloads for those entries. Installation itself does not execute this workflow; the lead skill loads this reference on first use or an explicit environment-check request.
 
 ## Inventory and duplicates
 
 Inspect the exposed skill/tool catalog and the plugin entry when available. Distinguish file-present, exposed in this chat, and functionally exercised. A same-name personal copy may coexist: preserve it, use the user's selected copy, otherwise use this plugin's bundled copy. Resolve the selected entrypoint and its resources from its actual directory. Do not guess which duplicate was loaded, delete a copy or upgrade an existing installation to standardize versions.
 
-If the package lacks one of its 19 bundled entries, report an incomplete package and recommend reinstalling/updating HTML Brifing through the documented source; do not instruct users to assemble 17 separate downloads. A stale current chat may need a new chat before discovery updates.
+If the package lacks one of its 18 bundled entries, report an incomplete package and recommend reinstalling/updating HTML Brifing through the documented source; do not instruct users to assemble 17 separate downloads. A stale current chat may need a new chat before discovery updates.
 
 ## Runtime readiness
 

@@ -1,10 +1,7 @@
 # Current state
 
-- Published and installed **0.3.0**, 2026-09-29. Codex reports html-brifing@html-brifing enabled. [Public release](https://github.com/thejaytang/html-brifing/releases/tag/v0.3.0).
-- Tag v0.3.0 identifies `ed19a9761ff186450d11a1583086190f9eb8cfff`. Downloaded ZIP, source tag and all 222 installed runtime files match. [Artifact identity](project-support/release-verification-0.3.0.json).
-- Complete redistributable bundle: 19 real skill entrypoints, including Impeccable, UI UX Pro Max, Humanizer, ImageGen, Playwright, Ponytail core and all eight GSAP skills. Original personal skill snapshots remain unchanged. [Inventory](plugins/html-brifing/skills/html-brifing/references/bundled-skills.md), [licenses/adaptations](plugins/html-brifing/THIRD_PARTY_NOTICES.md).
-- Portable root plugin.json plus supported Codex compatibility overlay; entrypoints load relevant references progressively. First-use setup checks included resources and required runtimes; it does not ask users to separately install already-bundled skills.
-- Visualize remains external because its original manifest is Proprietary. Image-generation tools/services, browsers, runtime libraries and the Impeccable engine are separate from skill files.
-- Verification: **8/9 acceptance groups passed; UI observation blocked**. All 19 automated tests pass, clean extracted installation succeeds, installed helper probes succeed, and public bilingual README navigation is verified. [Full evidence](project-support/evaluation-0.3.0.md).
-- Remaining: reopen the Codex detail page to confirm visible 19 skills and version 0.3.0. The computer-use tool prohibits Codex app access. Start a new chat for updated skill discovery, then invoke `$html-brifing-setup`.
-- Limits: native Windows/Linux, actual image generation and every helper combination remain unverified. Manual routing simulations are not deterministic host-routing evidence. Main includes post-publication records; tagged archives remain unchanged.
+- Preparing **0.3.1**, 2026-09-29: merge first-use setup into the HTML Brifing lead skill's internal reference. Environment-only requests use the same main entrypoint and stop after the check.
+- The package contains 18 skills: one briefing coordinator and all 17 unchanged imported helpers. [Inventory](plugins/html-brifing/skills/html-brifing/references/bundled-skills.md).
+- Portable root manifest and Codex overlay remain aligned. Existing personal copies, upstream licenses and resource hashes remain preserved. Visualize remains external; tools/services and runtime libraries remain separate from skill files.
+- Validation and publication are in progress. [Current evidence](project-support/evaluation-0.3.1.md). Native Codex UI observation is blocked by the computer-use restriction; installation/file checks cannot establish the visible UI state.
+- Previous release: [0.3.0](https://github.com/thejaytang/html-brifing/releases/tag/v0.3.0), with [recorded evidence](project-support/evaluation-0.3.0.md). Existing tags and archives remain unchanged.

@@ -7,26 +7,26 @@
 
 ![HTML Brifing: project evidence, a clear story, an offline presentation](assets/cover.svg)
 
-Turn project materials into an evidence-led HTML briefing with 19 bundled skills for design, charts, images, animation, writing and browser QA. For technical teams, researchers and practitioners explaining how their work operates and what its results support.
+Turn project materials into an evidence-led HTML briefing with 18 bundled skills for design, charts, images, animation, writing and browser QA. For technical teams, researchers and practitioners explaining how their work operates and what its results support.
 
 **One entrypoint. Keep your existing skills. Deliver an explanation people can inspect.**
 
-[Install](#1-install) · [Try a request](#3-use-it) · [Download v0.3.0](https://github.com/thejaytang/html-brifing/releases/tag/v0.3.0) · [Capability map](plugins/html-brifing/skills/html-brifing/references/capabilities.md)
+[Install](#1-install) · [Try a request](#3-use-it) · [Download v0.3.1](https://github.com/thejaytang/html-brifing/releases/tag/v0.3.1) · [Capability map](plugins/html-brifing/skills/html-brifing/references/capabilities.md)
 
 The package has a portable root `plugin.json` and retains the supported Codex compatibility manifest. This format choice does not establish cross-host runtime compatibility. The identifier `html-brifing` is intentional. This is a skill orchestration plugin, not a slide editor or an automatic dependency manager.
 
 ## 1. Install
 
-Requires a Codex host with plugin support, file access and an authorized project workspace. A browser is needed to verify the rendered deliverable. The plugin installs all 19 redistributable workflow skills together. Host services and runtime libraries remain separate; first-use setup checks their availability.
+Requires a Codex host with plugin support, file access and an authorized project workspace. A browser is needed to verify the rendered deliverable. The plugin installs all 18 redistributable workflow skills together. Host services and runtime libraries remain separate; first-use setup checks their availability.
 
 ```sh
-codex plugin marketplace add thejaytang/html-brifing --ref v0.3.0
+codex plugin marketplace add thejaytang/html-brifing --ref v0.3.1
 codex plugin add html-brifing@html-brifing
 ```
 
-Start a **new chat**, select **HTML Brifing** if needed, and run `$html-brifing-setup` once. It checks bundle completeness and runtime readiness, showing what is available, missing or unknown. Already-bundled skills need no separate download. Then invoke `$html-brifing` for your report. The lead also routes first-time users through this check; installation itself does not execute a setup hook. Do not remove or overwrite existing design, ImageGen, writing or chart skills. Choose one briefing entrypoint per task if an older personal briefing skill also exists.
+Start a **new chat** and invoke `$html-brifing` with your briefing request. On first use it checks the capabilities needed for the task internally; there is no separate setup skill to run. For a standalone check, say “Use $html-brifing to check my environment only.” It reports available, missing or unknown capabilities without creating a presentation or installing dependencies. Already-bundled skills need no separate download. Preserve existing personal skills; your explicitly selected copy takes precedence. Installation itself does not run setup.
 
-For a downloaded release, extract the archive, enter its `html-brifing-0.3.0` directory, then run:
+For a downloaded release, extract the archive, enter its `html-brifing-0.3.1` directory, then run:
 
 ```sh
 codex plugin marketplace add .
@@ -37,11 +37,11 @@ Use either installation route, not both. See [maintenance](docs/maintenance.md) 
 
 ## 2. What is actually included
 
-**19 real skill entrypoints ship in this plugin.** Their references, scripts, datasets, presets and notices are included where required. Existing personal skills are preserved: your explicitly chosen version wins, otherwise the lead uses the bundled copy.
+**18 real skill entrypoints ship in this plugin.** Their references, scripts, datasets, presets and notices are included where required. Existing personal skills are preserved: your explicitly chosen version wins, otherwise the lead uses the bundled copy.
 
 | Included workflow | Entries | Source and role |
 |---|---:|---|
-| HTML Brifing + first-use setup | 2 | Jay Tang: narrative, evidence, diagrams, integration and final delivery checks |
+| HTML Brifing (including environment checks) | 1 | Jay Tang: narrative, evidence, diagrams, integration and final delivery checks |
 | Impeccable | 1 | [pbakaus](https://github.com/pbakaus/impeccable): main design system and visual review |
 | UI UX Pro Max | 1 | [nextlevelbuilder](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill): searchable design and chart references |
 | Humanizer | 1 | [blader](https://github.com/blader/humanizer): natural general prose |
@@ -53,7 +53,7 @@ Use either installation route, not both. See [maintenance](docs/maintenance.md) 
 | Academic Research Plotting | 1 | [Author-maintained upstream](https://github.com/thejaytang/academic-research-plotting): chart choice, styling, audit and export |
 | Research Results Tables | 1 | [Bundled skill](plugins/html-brifing/skills/research-results-tables/SKILL.md): numerical reconciliation and result tables |
 
-[All 19 entrypoints](plugins/html-brifing/skills/html-brifing/references/bundled-skills.md) · [Licenses, sources and package adaptations](plugins/html-brifing/THIRD_PARTY_NOTICES.md)
+[All 18 entrypoints](plugins/html-brifing/skills/html-brifing/references/bundled-skills.md) · [Licenses, sources and package adaptations](plugins/html-brifing/THIRD_PARTY_NOTICES.md)
 
 **Visualize is the one external skill integration.** Its installed OpenAI plugin manifest declares `Proprietary`, and no redistribution grant was established. Its source is not copied here. Reuse it for chat previews when available; standalone HTML/SVG explanations work without it. Earlier workflow influences listed in the sources are provenance, not active skill dependencies.
 
@@ -126,7 +126,7 @@ python3 -m venv .venv
 .venv/bin/python -m unittest discover -s tests
 ```
 
-The checker uses Python 3.10+ standard library only. The full test suite also exercises the bundled plotting helpers; the lockfile records the Python 3.12 macOS test environment. Use the equivalent virtual-environment executable on other systems, whose native acceptance is unverified. It validates package paths and resources, not browser behavior. Read [AGENTS.md](AGENTS.md), [current state](PROJECT_STATE.md) and [release validation](project-support/evaluation-0.3.0.md) before contributing. Reproduction reports should identify the scene, state, viewport and input without private material.
+The checker uses Python 3.10+ standard library only. The full test suite also exercises the bundled plotting helpers; the lockfile records the Python 3.12 macOS test environment. Use the equivalent virtual-environment executable on other systems, whose native acceptance is unverified. It validates package paths and resources, not browser behavior. Read [AGENTS.md](AGENTS.md), [current state](PROJECT_STATE.md) and [release validation](project-support/evaluation-0.3.1.md) before contributing. Reproduction reports should identify the scene, state, viewport and input without private material.
 
 [Sources and optional upstreams](plugins/html-brifing/skills/html-brifing/references/sources.md) distinguish inspiration, recommended helpers and host documentation. Redistributed skills retain upstream licenses and credits; Visualize alone remains an external proprietary integration.
 

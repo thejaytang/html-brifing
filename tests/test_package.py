@@ -22,6 +22,11 @@ class PackageChecks(unittest.TestCase):
     def test_valid_package(self):
         self.assertEqual(checker.check(self.root), [])
 
+    def test_reintroduced_setup_entry(self):
+        skills = self.root / 'plugins/html-brifing/skills'
+        shutil.copytree(skills / 'html-brifing', skills / 'html-brifing-setup')
+        self.assertTrue(checker.check(self.root))
+
     def test_missing_skill(self):
         (self.root / 'plugins/html-brifing/skills/html-brifing/SKILL.md').unlink()
         self.assertTrue(checker.check(self.root))

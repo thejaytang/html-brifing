@@ -1,4 +1,0 @@
-interface:
-  display_name: "HTML Brifing Setup"
-  short_description: "Check all bundled skills and missing runtimes"
-  default_prompt: "Use $html-brifing-setup to verify the 19 bundled skills, keep my existing versions, and check missing runtime capabilities."

@@ -1,11 +1,10 @@
-# The 19 included skills
+# The 18 included skills
 
 These are real directories in this plugin, not installation suggestions. The user's explicitly chosen existing copy takes precedence; otherwise use the bundled copy. Resolve each skill from the directory linked here. Load only the relevant workflow.
 
 | Entry | Role |
 |---|---|
 | [html-brifing](../../html-brifing/SKILL.md) | Narrative, evidence and delivery coordination |
-| [html-brifing-setup](../../html-brifing-setup/SKILL.md) | First-use bundle/runtime check |
 | [academic-humanizer](../../academic-humanizer/SKILL.md) | Scholarly prose |
 | [academic-research-plotting](../../academic-research-plotting/SKILL.md) | Scientific charts, audits and exports |
 | [gsap-core](../../gsap-core/SKILL.md) | GSAP core |

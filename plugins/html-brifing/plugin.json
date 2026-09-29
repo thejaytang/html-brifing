@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "html-brifing",
-  "version": "0.3.0",
-  "description": "Nineteen bundled skills for evidence-led HTML briefings: design, images, GSAP animation, writing, charts and browser QA.",
+  "version": "0.3.1",
+  "description": "Eighteen bundled skills for evidence-led HTML briefings: design, images, GSAP animation, writing, charts and browser QA.",
   "author": {
     "name": "Jay Tang",
     "url": "https://github.com/thejaytang"

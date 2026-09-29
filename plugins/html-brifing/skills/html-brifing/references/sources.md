@@ -2,7 +2,7 @@
 
 ## Actual bundled skills
 
-See [the 19-entry inventory](bundled-skills.md) for every shipped entrypoint and [the installed-package notices](../../../THIRD_PARTY_NOTICES.md) for direct upstream links, licenses, source snapshots and adaptations. The repository's original work is MIT; redistributed skill files retain MIT or Apache-2.0 as listed.
+See [the 18-entry inventory](bundled-skills.md) for every shipped entrypoint and [the installed-package notices](../../../THIRD_PARTY_NOTICES.md) for direct upstream links, licenses, source snapshots and adaptations. The repository's original work is MIT; redistributed skill files retain MIT or Apache-2.0 as listed.
 
 Impeccable, UI UX Pro Max, Humanizer, ImageGen, Playwright, Ponytail and all eight GSAP modules are copied into this plugin with their needed skill resources. Academic Humanizer, Academic Research Plotting and Research Results Tables remain bundled. Existing user installations are not overwritten.
 

@@ -7,26 +7,26 @@
 
 ![HTML Brifing：项目证据、清晰叙事与离线汇报](assets/cover.zh-CN.svg)
 
-通过内置的 19 个设计、图表、图像、动效、文字和浏览器验收技能，把项目材料做成有证据支撑的 HTML 汇报。适合需要解释工作机制与结果的技术团队、研究者和业务实践者。
+通过内置的 18 个设计、图表、图像、动效、文字和浏览器验收技能，把项目材料做成有证据支撑的 HTML 汇报。适合需要解释工作机制与结果的技术团队、研究者和业务实践者。
 
 **一个入口，保留已有技能，交付可查看、可操作的解释。**
 
-[安装](#1-安装) · [试用请求](#3-使用) · [下载 v0.3.0](https://github.com/thejaytang/html-brifing/releases/tag/v0.3.0) · [能力映射](plugins/html-brifing/skills/html-brifing/references/capabilities.md)
+[安装](#1-安装) · [试用请求](#3-使用) · [下载 v0.3.1](https://github.com/thejaytang/html-brifing/releases/tag/v0.3.1) · [能力映射](plugins/html-brifing/skills/html-brifing/references/capabilities.md)
 
 包内提供可移植的根级 `plugin.json`，并保留受支持的 Codex 兼容清单；这不等于已经验证跨宿主运行。标识符有意保留为 `html-brifing`。这是技能编排插件，不是幻灯片编辑器或自动依赖管理器。
 
 ## 1. 安装
 
-需要支持插件的 Codex、文件访问能力和已授权的项目工作区。实际渲染验收需要浏览器。插件一次安装全部 19 个可再分发的工作流技能。宿主服务和运行库仍需单独具备，首次设置会检查是否可用。
+需要支持插件的 Codex、文件访问能力和已授权的项目工作区。实际渲染验收需要浏览器。插件一次安装全部 18 个可再分发的工作流技能。宿主服务和运行库仍需单独具备，首次设置会检查是否可用。
 
 ```sh
-codex plugin marketplace add thejaytang/html-brifing --ref v0.3.0
+codex plugin marketplace add thejaytang/html-brifing --ref v0.3.1
 codex plugin add html-brifing@html-brifing
 ```
 
-安装后开启**新聊天**，必要时选择 **HTML Brifing**，先运行一次 `$html-brifing-setup`：检查包是否完整，以及运行条件是否具备，区分可用、缺失和未知。已内置的技能无需另行下载。随后用 `$html-brifing` 制作汇报。主技能也会引导首次使用者完成检查；安装插件本身不会自动执行设置钩子。已有设计、ImageGen、写作与图表技能无需删除或覆盖。如果保留了旧的个人汇报技能，每个任务选择一个汇报主入口。
+安装后开启**新聊天**，直接用 `$html-brifing` 提出汇报需求。首次使用时，它会在内部检查本次任务所需的能力，无需另行运行设置技能。需要单独排查时，说“使用 $html-brifing，只检查环境”。它会报告可用、缺失或未知的能力，不制作汇报或安装依赖。已内置的技能无需另行下载；已有个人技能保留，明确指定的版本优先。安装插件本身不会执行设置。
 
-使用发布压缩包时，解压并进入 `html-brifing-0.3.0` 目录，然后运行：
+使用发布压缩包时，解压并进入 `html-brifing-0.3.1` 目录，然后运行：
 
 ```sh
 codex plugin marketplace add .
@@ -37,11 +37,11 @@ codex plugin add html-brifing@html-brifing
 
 ## 2. 插件实际包含什么
 
-**插件内置 19 个真实技能入口**，所需参考资料、脚本、数据、预设和许可一同打包。已有个人技能保留：明确指定已有版本时优先使用，否则主流程使用包内版本。
+**插件内置 18 个真实技能入口**，所需参考资料、脚本、数据、预设和许可一同打包。已有个人技能保留：明确指定已有版本时优先使用，否则主流程使用包内版本。
 
 | 内置工作流 | 入口数 | 来源与职责 |
 |---|---:|---|
-| HTML Brifing 与首次设置 | 2 | Jay Tang：叙事、证据、图解、组合统筹与交付验收 |
+| HTML Brifing（含环境检查） | 1 | Jay Tang：叙事、证据、图解、组合统筹与交付验收 |
 | Impeccable | 1 | [pbakaus](https://github.com/pbakaus/impeccable)：主视觉系统与视觉审查 |
 | UI UX Pro Max | 1 | [nextlevelbuilder](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)：可搜索的设计与图表参考 |
 | Humanizer | 1 | [blader](https://github.com/blader/humanizer)：普通文字自然表达 |
@@ -53,7 +53,7 @@ codex plugin add html-brifing@html-brifing
 | Academic Research Plotting | 1 | [作者维护的上游](https://github.com/thejaytang/academic-research-plotting)：选图、样式、检查与导出 |
 | Research Results Tables | 1 | [内置技能](plugins/html-brifing/skills/research-results-tables/SKILL.md)：数值核对与结果表 |
 
-[全部 19 个入口](plugins/html-brifing/skills/html-brifing/references/bundled-skills.md) · [许可、来源和打包修改记录](plugins/html-brifing/THIRD_PARTY_NOTICES.md)
+[全部 18 个入口](plugins/html-brifing/skills/html-brifing/references/bundled-skills.md) · [许可、来源和打包修改记录](plugins/html-brifing/THIRD_PARTY_NOTICES.md)
 
 **Visualize 是唯一保留在外部的技能集成**。本机 OpenAI 插件清单明确标注 `Proprietary`，未取得再分发授权，因此没有复制其原文件。宿主已提供时可用于对话预览；独立 HTML/SVG 解释不依赖它。来源说明中的早期工作流借鉴属于出处记录，不是实际依赖的技能。
 
@@ -126,7 +126,7 @@ python3 -m venv .venv
 .venv/bin/python -m unittest discover -s tests
 ```
 
-检查工具只需要 Python 3.10+ 标准库。完整测试还会运行内置绘图脚本；锁文件记录本次 Python 3.12 macOS 测试环境。其他系统需使用对应的虚拟环境执行路径，原生验收尚未验证。结构检查不代替浏览器验收。贡献前阅读 [AGENTS.md](AGENTS.md)、[当前状态](PROJECT_STATE.md)和[发布验证记录](project-support/evaluation-0.3.0.md)。复现报告请说明场景、状态、窗口和输入，不附私有材料。
+检查工具只需要 Python 3.10+ 标准库。完整测试还会运行内置绘图脚本；锁文件记录本次 Python 3.12 macOS 测试环境。其他系统需使用对应的虚拟环境执行路径，原生验收尚未验证。结构检查不代替浏览器验收。贡献前阅读 [AGENTS.md](AGENTS.md)、[当前状态](PROJECT_STATE.md)和[发布验证记录](project-support/evaluation-0.3.1.md)。复现报告请说明场景、状态、窗口和输入，不附私有材料。
 
 [来源与可选上游](plugins/html-brifing/skills/html-brifing/references/sources.md)区分借鉴来源、推荐技能和宿主文档。再分发的技能保留上游许可与署名；仅 Visualize 保持外部专有集成。
 

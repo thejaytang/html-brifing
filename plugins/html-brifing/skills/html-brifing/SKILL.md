@@ -1,6 +1,6 @@
 ---
 name: html-brifing
-description: Plan, create, revise or review evidence-led HTML project briefings and interactive presentations. Coordinate bundled design, ImageGen, motion, browser, writing, plotting and table skills; preserve presenter control and verify offline delivery. Use for HTML work reports, technical demos and project showcases, not production websites, ordinary text updates or native PPTX authoring.
+description: Plan, create, revise or review evidence-led HTML project briefings and interactive presentations. Coordinate bundled design, ImageGen, motion, browser, writing, plotting and table skills; preserve presenter control and verify offline delivery. Use for environment checks, HTML work reports, technical demos and project showcases, not production websites, ordinary text updates or native PPTX authoring.
 license: MIT
 ---
 
@@ -16,7 +16,7 @@ Read applicable project instructions and current source materials. Find the auth
 - **Review only:** inspect and report findings; do not modify the presentation.
 - **Create / revise:** implement and validate the authorized scope. A small edit does not trigger a full redesign or a new approval sequence.
 
-For first use or a setup request, use [html-brifing-setup](../html-brifing-setup/SKILL.md) to verify all 19 bundled skills and check missing runtimes or host capabilities. Reuse a completed setup inventory; do not repeat it for every scene. Setup-only requests do not start presentation work.
+On first use, read [the environment-check procedure](references/setup.md) internally and check the capabilities needed for the current task. Do not ask the user to invoke a separate setup skill. For an explicit “check environment” or “检查环境” request, use the same procedure to report bundle completeness and runtime readiness, then stop without creating a presentation. Reuse a completed inventory; refresh only on request or a relevant environment change, not for every scene or small edit.
 
 Read [capabilities.md](references/capabilities.md) before selecting helpers. Reuse available skills by capability and user preference; read the actual chosen skill. Never assume a named skill, model or tool exists. Keep third-party installations intact. Check each capability's availability and scope, not every skill on the machine. A skill document does not grant its underlying tool or credentials.
 
@@ -62,4 +62,4 @@ For maintenance or provenance, read [experience.md](references/experience.md) an
 
 ## Bundled skill resolution
 
-This release includes the [19-entry inventory](references/bundled-skills.md). Use those actual skill directories by default, or the user's expressly chosen existing equivalents. Impeccable, UI UX Pro Max, Humanizer, ImageGen, Playwright, Ponytail and all eight GSAP modules are included. Visualize remains an optional proprietary host integration. First-use setup checks bundle completeness and runtime readiness; do not tell users to separately install already-bundled skills. All helpers remain subordinate to user scope, evidence integrity, required tests and project isolation.
+This release includes the [18-entry inventory](references/bundled-skills.md). Use those actual skill directories by default, or the user's expressly chosen existing equivalents. Impeccable, UI UX Pro Max, Humanizer, ImageGen, Playwright, Ponytail and all eight GSAP modules are included. Visualize remains an optional proprietary host integration. First-use setup checks bundle completeness and runtime readiness; do not tell users to separately install already-bundled skills. All helpers remain subordinate to user scope, evidence integrity, required tests and project isolation.

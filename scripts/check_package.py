@@ -51,7 +51,8 @@ def check(root):
         assert bundle['version'] == manifest['version'], 'Bundle version mismatch'
         imported = {item['skill']: item for item in bundle['bundled']}
         expected = set(bundle['coordinationSkills']) | set(imported)
-        assert len(expected) == 19 and len(imported) == 17, 'Incomplete declared bundle'
+        assert bundle['coordinationSkills'] == ['html-brifing'], 'Use one briefing coordination entrypoint'
+        assert len(expected) == 18 and len(imported) == 17, 'Incomplete declared bundle'
         actual = {p.parent.name for p in skills.glob('*/SKILL.md')}
         assert actual == expected, f'Skill inventory: expected {sorted(expected)}, got {sorted(actual)}'
         for name in expected:

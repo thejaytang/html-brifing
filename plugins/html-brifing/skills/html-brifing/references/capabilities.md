@@ -39,6 +39,6 @@ One lead workflow owns integration. A helper's attractive image, passing unit te
 
 ## Bundle and runtime gaps
 
-Read [the bundled inventory](bundled-skills.md). All 19 entries and their resources ship in this plugin. Keep existing personal installations intact. On first use, html-brifing-setup verifies the bundle and checks runtime readiness. Missing packaged files are an incomplete installation; missing browser, image service, GSAP library or Python packages are separate runtime gaps. Recommend only what is actually absent and obtain appropriate authorization before installation. Visualize remains the sole external skill integration because the installed original is proprietary.
+Read [the bundled inventory](bundled-skills.md). All 18 entries and their resources ship in this plugin. Keep existing personal installations intact. On first use, the lead loads [its internal environment check](setup.md) for the capabilities needed by the task. Missing packaged files are an incomplete installation; missing browser, image service, GSAP library or Python packages are separate runtime gaps. Recommend only what is actually absent and obtain appropriate authorization before installation. Visualize remains the sole external skill integration because the installed original is proprietary.
 
 Sources, notices and adaptations are packaged in [THIRD_PARTY_NOTICES](../../../THIRD_PARTY_NOTICES.md). Pin runtime versions in project evidence when they materially affect reproducibility. Do not infer whole-briefing acceptance from a helper's local success.

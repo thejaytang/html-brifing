@@ -4,19 +4,19 @@ The repository is a small Codex marketplace containing one plugin. The requested
 
 ## Update
 
-The quick start pins v0.3.0 for reproducibility. To move to a newer published version, select that tag explicitly. Inspect `codex plugin marketplace add --help` and the configured source before changing it. When the marketplace name is already configured, remove only its source registration before adding the replacement:
+The quick start pins v0.3.1 for reproducibility. To move to a newer published version, select that tag explicitly. Inspect `codex plugin marketplace add --help` and the configured source before changing it. When the marketplace name is already configured, remove only its source registration before adding the replacement:
 
 ```sh
 codex plugin marketplace remove html-brifing
-codex plugin marketplace add thejaytang/html-brifing --ref v0.3.0
+codex plugin marketplace add thejaytang/html-brifing --ref v0.3.1
 codex plugin add html-brifing@html-brifing
 ```
 
-Replace v0.3.0 with the published version you intend to install. This does not authorize deleting project files or other skills. Start a new chat after installation. For local development, use the host's documented plugin cachebuster/update helper; do not edit installed cache files or hand-edit marketplace configuration to force refresh.
+Replace v0.3.1 with the published version you intend to install. This does not authorize deleting project files or other skills. Start a new chat after installation. For local development, use the host's documented plugin cachebuster/update helper; do not edit installed cache files or hand-edit marketplace configuration to force refresh.
 
 ## First use, duplicates and bundle updates
 
-Run `$html-brifing-setup` in a new chat. The bundle contains 19 entries; the setup checks packaged resources and runtime readiness. Preserve personal copies and prefer the user's explicitly chosen version. Otherwise resolve the plugin's own skill path. Do not overwrite global skill folders or ask users to separately install already-included skills.
+Invoke `$html-brifing` in a new chat; it checks relevant capabilities internally on first use. Say “Use $html-brifing to check my environment only” for a standalone check. The bundle contains 18 entries; the former separate setup skill is now an internal reference. Migrating from 0.3.0 removes only that redundant entrypoint, not a helper skill. Preserve personal copies and prefer the user's explicitly chosen version. Otherwise resolve the plugin's own skill path. Do not overwrite global skill folders or ask users to separately install already-included skills.
 
 All redistributed snapshots and file hashes are in plugins/html-brifing/bundle.json; the companion THIRD_PARTY_NOTICES.md identifies upstreams, licenses and adaptations. When updating a copied skill, review its actual changes, preserve notices, update its hashes and rerun structural and behavioral checks. Do not apply the root MIT license over Apache-2.0 material. Visualize stays external until a redistribution grant is established.
 
