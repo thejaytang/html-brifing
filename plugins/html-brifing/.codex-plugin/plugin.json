@@ -1,7 +1,7 @@
 {
   "name": "html-brifing",
-  "version": "0.1.0",
-  "description": "Compose installed skills into evidence-led, offline HTML briefings.",
+  "version": "0.2.0",
+  "description": "HTML briefings with bundled author-maintained writing, plotting and table skills, plus first-use companion setup.",
   "author": {
     "name": "Jay Tang",
     "url": "https://github.com/thejaytang"
@@ -9,16 +9,18 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "HTML Brifing",
-    "shortDescription": "From project evidence to an interactive HTML briefing.",
-    "longDescription": "Plan the narrative, reuse installed design, chart, image and motion skills, and verify the final offline briefing. No third-party skills are installed automatically.",
+    "shortDescription": "Five skills for evidence-led HTML briefings.",
+    "longDescription": "Includes the HTML briefing lead, first-use setup, Academic Humanizer, Academic Research Plotting and Research Results Tables. Reuse existing companion skills and get a complete missing-skill checklist before installing anything.",
     "developerName": "Jay Tang",
     "category": "Productivity",
     "capabilities": [],
     "defaultPrompt": [
+      "Use $html-brifing-setup to check my installation and recommend missing companion skills.",
       "Use $html-brifing to create an offline project briefing.",
       "Use $html-brifing to review this existing HTML presentation."
     ],
-    "brandColor": "#126B61"
+    "brandColor": "#126B61",
+    "websiteURL": "https://github.com/thejaytang/html-brifing"
   },
   "license": "MIT",
   "repository": "https://github.com/thejaytang/html-brifing",

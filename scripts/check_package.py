@@ -42,9 +42,20 @@ def check(root):
         assert manifest['skills'].startswith('./') and '..' not in Path(manifest['skills']).parts
         skills = local(plugin, manifest['skills'])
         assert skills and skills.is_relative_to(root)
-        skill = skills / 'html-brifing/SKILL.md'
-        assert skill.is_file() and skill.read_text().startswith('---\nname: html-brifing\n')
-        assert (skills / 'html-brifing/agents/openai.yaml').is_file()
+        expected = {'html-brifing', 'html-brifing-setup', 'academic-humanizer',
+                    'academic-research-plotting', 'research-results-tables'}
+        actual = {p.parent.name for p in skills.glob('*/SKILL.md')}
+        assert actual == expected, f'Skill inventory: expected {sorted(expected)}, got {sorted(actual)}'
+        for name in expected:
+            skill = skills / name / 'SKILL.md'
+            assert skill.read_text().startswith(f'---\nname: {name}\n'), f'Wrong skill name: {name}'
+            assert (skills / name / 'agents/openai.yaml').is_file(), f'Missing UI metadata: {name}'
+        snapshots = json.loads((root / 'project-support/bundled-sources.json').read_text())
+        assert {s['skill'] for s in snapshots} == expected - {'html-brifing', 'html-brifing-setup'}
+        for snapshot in snapshots:
+            for resource in set(snapshot['sourceFileSha256']) | {'LICENSE'}:
+                path = local(skills / snapshot['skill'], resource)
+                assert path and path.is_file(), f'Missing bundled resource: {resource}'
     except (AssertionError, KeyError, ValueError, TypeError, OSError) as exc:
         fail(f'Invalid package/skill manifest: {exc}')
 

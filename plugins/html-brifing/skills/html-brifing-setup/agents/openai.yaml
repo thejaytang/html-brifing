@@ -1,0 +1,4 @@
+interface:
+  display_name: "HTML Brifing Setup"
+  short_description: "Check bundled skills and complete the companion set"
+  default_prompt: "Use $html-brifing-setup to check my installation, keep existing skills, and recommend the complete missing companion set."

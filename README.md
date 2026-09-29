@@ -11,22 +11,22 @@ Turn project materials into an evidence-led HTML briefing by coordinating the de
 
 **One entrypoint. Keep your existing skills. Deliver an explanation people can inspect.**
 
-[Install](#1-install) · [Try a request](#2-use-it) · [Download v0.1.0](https://github.com/thejaytang/html-brifing/releases/tag/v0.1.0) · [Capability map](plugins/html-brifing/skills/html-brifing/references/capabilities.md)
+[Install](#1-install) · [Try a request](#3-use-it) · [Download v0.2.0](https://github.com/thejaytang/html-brifing/releases/tag/v0.2.0) · [Capability map](plugins/html-brifing/skills/html-brifing/references/capabilities.md)
 
 The identifier `html-brifing` is intentional. This is a skill orchestration plugin, not a slide editor or an automatic dependency manager.
 
 ## 1. Install
 
-Requires a Codex host with plugin support, file access and an authorized project workspace. A browser is needed to verify the rendered deliverable. Optional helpers and their tools are detected by the agent when relevant; none are bundled or installed automatically.
+Requires a Codex host with plugin support, file access and an authorized project workspace. A browser is needed to verify the rendered deliverable. The plugin bundles five skills, including three author-maintained writing, plotting and table workflows. External companion skills and runtimes are not installed automatically.
 
 ```sh
-codex plugin marketplace add thejaytang/html-brifing --ref v0.1.0
+codex plugin marketplace add thejaytang/html-brifing --ref v0.2.0
 codex plugin add html-brifing@html-brifing
 ```
 
-Start a **new chat**, select **HTML Brifing** if needed, and invoke `$html-brifing`. Do not remove or overwrite existing design, ImageGen, writing or chart skills. Choose one briefing entrypoint per task if an older personal briefing skill also exists.
+Start a **new chat**, select **HTML Brifing** if needed, and run `$html-brifing-setup` once. It checks the five bundled skills and recommends the complete eight-group companion set below, showing what is available, missing or unknown. Then invoke `$html-brifing` for your report. The lead also routes first-time users through this check; installation itself does not execute a setup hook. Do not remove or overwrite existing design, ImageGen, writing or chart skills. Choose one briefing entrypoint per task if an older personal briefing skill also exists.
 
-For a downloaded release, extract the archive, enter its `html-brifing-0.1.0` directory, then run:
+For a downloaded release, extract the archive, enter its `html-brifing-0.2.0` directory, then run:
 
 ```sh
 codex plugin marketplace add .
@@ -35,7 +35,36 @@ codex plugin add html-brifing@html-brifing
 
 Use either installation route, not both. See [maintenance](docs/maintenance.md) for updates and source changes. The archive includes the marketplace; installing only the nested plugin directory is not the documented route.
 
-## 2. Use it
+## 2. Bundled skills and recommended companions
+
+The plugin detail page lists **5 skills**. External companions are listed in their own installations, so they do not increase this plugin's skill count. Existing personal copies are preserved: your explicitly chosen version wins, otherwise this plugin uses its bundled version.
+
+| Included skill | Purpose | Source / notice |
+|---|---|---|
+| [html-brifing](plugins/html-brifing/skills/html-brifing/SKILL.md) | Story, design coordination, diagrams, interactions and delivery QA | Jay Tang; MIT |
+| [html-brifing-setup](plugins/html-brifing/skills/html-brifing-setup/SKILL.md) | First-use inventory and complete companion recommendations | Jay Tang; MIT |
+| [academic-humanizer](plugins/html-brifing/skills/academic-humanizer/SKILL.md) | Scholarly writing with facts and evidence preserved | [Author-maintained upstream](https://github.com/thejaytang/academic-humanizer); [MIT and upstream credits](plugins/html-brifing/skills/academic-humanizer/LICENSE) |
+| [academic-research-plotting](plugins/html-brifing/skills/academic-research-plotting/SKILL.md) | Chart selection, style, audit and export | [Author-maintained upstream](https://github.com/thejaytang/academic-research-plotting); [MIT](plugins/html-brifing/skills/academic-research-plotting/LICENSE) |
+| [research-results-tables](plugins/html-brifing/skills/research-results-tables/SKILL.md) | Reconciled empirical result tables | Jay Tang; [MIT](plugins/html-brifing/skills/research-results-tables/LICENSE) |
+
+Required supporting references, plotting scripts and presets are included. Matplotlib is needed to execute the plotting scripts; install project dependencies in the project's isolated environment if needed. Skill installation does not install Python packages.
+
+For the full combination, first-use setup recommends **all eight companion groups**. Each report loads only the relevant ones. Keep existing skills; missing ones are installed only with authorization.
+
+| External companion | Source / author | Role |
+|---|---|---|
+| Impeccable | [pbakaus](https://github.com/pbakaus/impeccable) | Main design system and visual review |
+| UI UX Pro Max | [nextlevelbuilder](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | Supplementary design references |
+| Humanizer | [blader](https://github.com/blader/humanizer) | General writing |
+| GSAP Skills | [GreenSock](https://github.com/greensock/gsap-skills) | Motion and continuity |
+| ImageGen | [OpenAI skill](https://github.com/openai/skills/blob/main/skills/.system/imagegen/SKILL.md) | Raster illustrations, image editing and cutouts |
+| Playwright or working host browser | [OpenAI skill](https://github.com/openai/skills/blob/main/skills/.curated/playwright/SKILL.md) | Rendered and interaction QA |
+| Ponytail | [DietrichGebert](https://github.com/DietrichGebert/ponytail) | Simple, complete implementation |
+| Visualize | OpenAI host plugin directory; no verified standalone repository | Chat-native exploration |
+
+Academic Humanizer is author-maintained derived work. Its original AIScientists-Dev and Kiterlin notices and provenance remain intact. See [sources and earlier workflow influences](plugins/html-brifing/skills/html-brifing/references/sources.md) for complete attribution.
+
+## 3. Use it
 
 Illustrative requests, not claims about measured business outcomes:
 
@@ -48,7 +77,7 @@ Illustrative requests, not claims about measured business outcomes:
 
 Open [the fictional offline example](examples/offline-routing.html) directly in a browser. It demonstrates object-bound explanations; it does not connect to a real scheduler.
 
-## 3. How the combination works
+## 4. How the combination works
 
 ![Workflow: evidence and audience enter the lead skill; relevant installed helpers produce a shared design; actual final files are verified](assets/workflow.svg)
 
@@ -68,7 +97,7 @@ The lead skill establishes the audience, argument and evidence. It chooses the r
 
 Missing optional helpers use documented baselines. An unavailable required browser or image-generation tool remains an explicit gap. A skill file alone does not provide a model, runtime, credentials or service access. No silent paid ImageGen API fallback.
 
-## 4. Experience built into the workflow
+## 5. Experience built into the workflow
 
 - Give unfamiliar audiences the business context before implementation detail.
 - Keep the core solution visible; attach secondary explanations to their objects.
@@ -79,7 +108,7 @@ Missing optional helpers use documented baselines. An unavailable required brows
 
 [Distilled experience](plugins/html-brifing/skills/html-brifing/references/experience.md) separates these transferable lessons from optional title styles, navigation and motion preferences. No private business data or project screenshots are included.
 
-## 5. Fit, compatibility and limits
+## 6. Fit, compatibility and limits
 
 Use this for project briefings, research explanations, technical demos and presenter-controlled HTML reports. Choose a production-web workflow for applications, a native presentation workflow for editable PPTX, or ordinary writing for a text-only update.
 
@@ -93,15 +122,17 @@ Use this for project briefings, research explanations, technical demos and prese
 
 The workflow is interpreted by the agent. It does not guarantee deterministic routing or universally correct output. Instructions are primarily English; the detailed delivery checklist is retained in Chinese. Both README languages describe the same capabilities; this does not establish bilingual runtime testing.
 
-## 6. Development, evidence and sources
+## 7. Development, evidence and sources
 
 ```sh
 python3 scripts/check_package.py
-python3 -m unittest discover -s tests
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements-dev.lock
+.venv/bin/python -m unittest discover -s tests
 ```
 
-The checker uses Python 3.10+ standard library only. It validates package paths and resources, not browser behavior. Read [AGENTS.md](AGENTS.md), [current state](PROJECT_STATE.md) and [release validation](project-support/evaluation.md) before contributing. Reproduction reports should identify the scene, state, viewport and input without private material.
+The checker uses Python 3.10+ standard library only. The full test suite also exercises the bundled plotting helpers; the lockfile records the Python 3.12 macOS test environment. Use the equivalent virtual-environment executable on other systems, whose native acceptance is unverified. It validates package paths and resources, not browser behavior. Read [AGENTS.md](AGENTS.md), [current state](PROJECT_STATE.md) and [release validation](project-support/evaluation.md) before contributing. Reproduction reports should identify the scene, state, viewport and input without private material.
 
-[Sources and optional upstreams](plugins/html-brifing/skills/html-brifing/references/sources.md) distinguish inspiration, recommended helpers and host documentation. Third-party skills are not copied into this repository.
+[Sources and optional upstreams](plugins/html-brifing/skills/html-brifing/references/sources.md) distinguish inspiration, recommended helpers and host documentation. External companion skills remain separate; bundled author-maintained derivatives retain their upstream licenses and credits.
 
 [MIT](LICENSE), copyright 2026 Jay Tang, covers this repository's original guidance, artwork and checker. External skills, libraries and services keep their own terms. [Issues and suggestions](https://github.com/thejaytang/html-brifing/issues) are welcome.

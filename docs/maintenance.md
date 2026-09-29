@@ -4,15 +4,19 @@ The repository is a small Codex marketplace containing one plugin. The requested
 
 ## Update
 
-The quick start pins v0.1.0 for reproducibility. To move to a newer published version, select that tag explicitly. Inspect `codex plugin marketplace add --help` and the configured source before changing it. When the marketplace name is already configured, remove only its source registration before adding the replacement:
+The quick start pins v0.2.0 for reproducibility. To move to a newer published version, select that tag explicitly. Inspect `codex plugin marketplace add --help` and the configured source before changing it. When the marketplace name is already configured, remove only its source registration before adding the replacement:
 
 ```sh
 codex plugin marketplace remove html-brifing
-codex plugin marketplace add thejaytang/html-brifing --ref v0.1.0
+codex plugin marketplace add thejaytang/html-brifing --ref v0.2.0
 codex plugin add html-brifing@html-brifing
 ```
 
-Replace v0.1.0 with the published version you intend to install. This does not authorize deleting project files or other skills. Start a new chat after installation. For local development, use the host's documented plugin cachebuster/update helper; do not edit installed cache files or hand-edit marketplace configuration to force refresh.
+Replace v0.2.0 with the published version you intend to install. This does not authorize deleting project files or other skills. Start a new chat after installation. For local development, use the host's documented plugin cachebuster/update helper; do not edit installed cache files or hand-edit marketplace configuration to force refresh.
+
+## First use and companions
+
+Run `$html-brifing-setup` in a new chat after installation. The detail page should show five skill entrypoints. Setup reports the full eight-group companion checklist once; this is not an installation hook. Existing copies stay intact. The three bundled author-maintained skills include their resources and licenses. Source snapshots are recorded in project-support/bundled-sources.json.
 
 ## Optional helpers
 

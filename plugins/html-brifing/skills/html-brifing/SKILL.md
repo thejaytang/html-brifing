@@ -1,6 +1,6 @@
 ---
 name: html-brifing
-description: Plan, create, revise or review evidence-led HTML project briefings and interactive presentations. Coordinate available design, chart, ImageGen, writing, motion and browser skills; preserve presenter control and verify offline delivery. Use for HTML work reports, technical demos and project showcases, not production websites, ordinary text updates or native PPTX authoring.
+description: Plan, create, revise or review evidence-led HTML project briefings and interactive presentations. Coordinate bundled writing, plotting and table skills with available design, ImageGen, motion and browser skills; preserve presenter control and verify offline delivery. Use for HTML work reports, technical demos and project showcases, not production websites, ordinary text updates or native PPTX authoring.
 license: MIT
 ---
 
@@ -15,6 +15,8 @@ Read applicable project instructions and current source materials. Find the auth
 - **Discussion / planning:** inspect materials and propose a narrative; do not build, install or publish.
 - **Review only:** inspect and report findings; do not modify the presentation.
 - **Create / revise:** implement and validate the authorized scope. A small edit does not trigger a full redesign or a new approval sequence.
+
+For first use or a setup request, use [html-brifing-setup](../html-brifing-setup/SKILL.md) to check the five bundled skills and recommend the complete companion set. Reuse a completed setup inventory; do not repeat it for every scene. Setup-only requests do not start presentation work.
 
 Read [capabilities.md](references/capabilities.md) before selecting helpers. Reuse available skills by capability and user preference; read the actual chosen skill. Never assume a named skill, model or tool exists. Keep third-party installations intact. Check each capability's availability and scope, not every skill on the machine. A skill document does not grant its underlying tool or credentials.
 

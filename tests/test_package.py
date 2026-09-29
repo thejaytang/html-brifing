@@ -26,6 +26,18 @@ class PackageChecks(unittest.TestCase):
         (self.root / 'plugins/html-brifing/skills/html-brifing/SKILL.md').unlink()
         self.assertTrue(checker.check(self.root))
 
+    def test_missing_bundled_entry(self):
+        (self.root / 'plugins/html-brifing/skills/research-results-tables/SKILL.md').unlink()
+        self.assertTrue(checker.check(self.root))
+
+    def test_missing_plot_preset(self):
+        (self.root / 'plugins/html-brifing/skills/academic-research-plotting/assets/journal_presets.json').unlink()
+        self.assertTrue(checker.check(self.root))
+
+    def test_missing_upstream_notice(self):
+        (self.root / 'plugins/html-brifing/skills/academic-humanizer/LICENSE').unlink()
+        self.assertTrue(checker.check(self.root))
+
     def test_manifest_escape(self):
         file = self.root / 'plugins/html-brifing/.codex-plugin/plugin.json'
         data = json.loads(file.read_text())

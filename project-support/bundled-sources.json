@@ -1,0 +1,49 @@
+[
+  {
+    "skill": "academic-humanizer",
+    "source": "author-maintained local skill snapshot",
+    "upstream": "https://github.com/thejaytang/academic-humanizer",
+    "sourceDate": "2026-09-29",
+    "sourceFileSha256": {
+      "LICENSE": "4d39c8689d473abbac936822f6bff43dd3725d5ead8a813ece02dbfce0432546",
+      "SKILL.md": "659033071a887084ca7004a0207ca0f8ddc8725a0c5e04e2441192e87b504aed",
+      "references/rubric.md": "45530b1bd21679bd887e3b9431146c8741fcd80a9eaff2b82f8e0824de9badd9",
+      "agents/openai.yaml": "14d4b068d2b34bf7b2a98443c89cbe843ab7c0aebe4562c3d758c171b75bdaef",
+      "examples/before-after.md": "f72b880f8dcbf7e03735b5ff68a3611e786a9e0e94e9338304e5f45c7ec3c751"
+    }
+  },
+  {
+    "skill": "academic-research-plotting",
+    "source": "author-maintained local skill snapshot",
+    "upstream": "https://github.com/thejaytang/academic-research-plotting",
+    "sourceDate": "2026-09-29",
+    "sourceFileSha256": {
+      "LICENSE": "3dcdc0718b5e11bc3abfe3119ead2e3caa335cc9f7d2232eac10546457d9ebb9",
+      "SKILL.md": "6704d18515e9059f63a1246dc951f64ebfac1436999cd124fb35d72976cb5574",
+      "references/style-system.md": "ebaa2ce3a4f4a14115b25b8c20e16ebc8a011627ce137bda7f0691e87f725bd0",
+      "references/python-patterns.md": "0d673b63866653f311e967f27c8fd447520c7ec33b95e4430957c545e1fa9d57",
+      "references/discipline-patterns.md": "e768dd2ef0622e45148921aad6b719b79f36a51e8df4b58370fd337b78b4bbe8",
+      "references/layout-qa.md": "972d142fc5727a16f7e6f6014a1f5fc3b9e5d28e0e4e71bb693871100b9f5fca",
+      "references/chart-selection.md": "8a959d6827005feb22e85280059db9b6041f8e54933cb234b90dbde1be2a0fb8",
+      "agents/openai.yaml": "5cdf75d1d2ee642523c47c178dc41dc1ab7f610d82c5a82954648c6ec549345e",
+      "scripts/export_figure.py": "8486bde3ce672765ca7c230d60fd09bb2c1c41eaac7b57796fafa2f272591fdc",
+      "scripts/research_plot_style.py": "5044a2a143d96681467e947247f120f894680ab478659860a19b52f57354f472",
+      "scripts/audit_figure.py": "c0c9c9e16ec7dbbc64470c7976aab6372092004def38d6b6a46572a503e60bb9",
+      "assets/journal_presets.json": "7e3a2f217d44f9417fe74e2e4d5d245aa9538885866d2a30ddf7a7f740310342"
+    }
+  },
+  {
+    "skill": "research-results-tables",
+    "source": "author-maintained local skill snapshot",
+    "upstream": null,
+    "sourceDate": "2026-09-29",
+    "sourceFileSha256": {
+      "SKILL.md": "8e9303a3d937343995f0438a8e995d506d99bba49c1fdcb7bc7c79687e2e3c8c",
+      "agents/openai.yaml": "b76134b4012ca4f5dcfc7fefcb2cc1f7a59cec1a04ed0036f4f71d8a590444f6"
+    },
+    "packageAdaptations": [
+      "Added MIT metadata and license for first bundled publication.",
+      "Made the UI default prompt explicitly invoke the skill."
+    ]
+  }
+]

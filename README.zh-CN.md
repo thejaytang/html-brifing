@@ -11,22 +11,22 @@
 
 **一个入口，保留已有技能，交付可查看、可操作的解释。**
 
-[安装](#1-安装) · [试用请求](#2-使用) · [下载 v0.1.0](https://github.com/thejaytang/html-brifing/releases/tag/v0.1.0) · [能力映射](plugins/html-brifing/skills/html-brifing/references/capabilities.md)
+[安装](#1-安装) · [试用请求](#3-使用) · [下载 v0.2.0](https://github.com/thejaytang/html-brifing/releases/tag/v0.2.0) · [能力映射](plugins/html-brifing/skills/html-brifing/references/capabilities.md)
 
 标识符有意保留为 `html-brifing`。这是技能编排插件，不是幻灯片编辑器或自动依赖管理器。
 
 ## 1. 安装
 
-需要支持插件的 Codex、文件访问能力和已授权的项目工作区。实际渲染验收需要浏览器。Agent 在需要时检查辅助技能及其工具；插件不内置或自动安装这些第三方能力。
+需要支持插件的 Codex、文件访问能力和已授权的项目工作区。实际渲染验收需要浏览器。插件内置 5 个技能，包含作者维护的学术写作、科研绘图和结果表技能。外部配套技能及运行依赖不会自动安装。
 
 ```sh
-codex plugin marketplace add thejaytang/html-brifing --ref v0.1.0
+codex plugin marketplace add thejaytang/html-brifing --ref v0.2.0
 codex plugin add html-brifing@html-brifing
 ```
 
-安装后开启**新聊天**，必要时选择 **HTML Brifing**，使用 `$html-brifing`。已有设计、ImageGen、写作与图表技能无需删除或覆盖。如果保留了旧的个人汇报技能，每个任务选择一个汇报主入口。
+安装后开启**新聊天**，必要时选择 **HTML Brifing**，先运行一次 `$html-brifing-setup`：检查 5 个内置技能，并完整建议下方 8 组配套能力，区分可用、缺失和未知。随后用 `$html-brifing` 制作汇报。主技能也会引导首次使用者完成检查；安装插件本身不会自动执行设置钩子。已有设计、ImageGen、写作与图表技能无需删除或覆盖。如果保留了旧的个人汇报技能，每个任务选择一个汇报主入口。
 
-使用发布压缩包时，解压并进入 `html-brifing-0.1.0` 目录，然后运行：
+使用发布压缩包时，解压并进入 `html-brifing-0.2.0` 目录，然后运行：
 
 ```sh
 codex plugin marketplace add .
@@ -35,7 +35,36 @@ codex plugin add html-brifing@html-brifing
 
 两条安装路径选择一条即可。更新和切换来源见[维护说明](docs/maintenance.md)。压缩包包含插件市场入口；不要只取内层插件目录来执行上述安装流程。
 
-## 2. 使用
+## 2. 内置技能与配套建议
+
+插件详情页应列出 **5 个技能**。外部配套技能仍显示在各自安装项下，不计入本插件的技能数量。已有个人版本会保留；明确指定已有版本时优先使用，否则使用本插件内置版本。
+
+| 内置技能 | 用途 | 来源与许可 |
+|---|---|---|
+| [html-brifing](plugins/html-brifing/skills/html-brifing/SKILL.md) | 叙事、设计统筹、图解、交互与交付验收 | Jay Tang；MIT |
+| [html-brifing-setup](plugins/html-brifing/skills/html-brifing-setup/SKILL.md) | 首次使用盘点与完整配套建议 | Jay Tang；MIT |
+| [academic-humanizer](plugins/html-brifing/skills/academic-humanizer/SKILL.md) | 保留事实与证据边界的学术表达 | [作者维护的上游](https://github.com/thejaytang/academic-humanizer)；[MIT 与上游署名](plugins/html-brifing/skills/academic-humanizer/LICENSE) |
+| [academic-research-plotting](plugins/html-brifing/skills/academic-research-plotting/SKILL.md) | 科研图表选择、样式、检查与导出 | [作者维护的上游](https://github.com/thejaytang/academic-research-plotting)；[MIT](plugins/html-brifing/skills/academic-research-plotting/LICENSE) |
+| [research-results-tables](plugins/html-brifing/skills/research-results-tables/SKILL.md) | 数值核对与实证结果表 | Jay Tang；[MIT](plugins/html-brifing/skills/research-results-tables/LICENSE) |
+
+所需参考资料、绘图脚本和预设一起打包。运行绘图脚本需要 Matplotlib；缺失时按项目约定在隔离环境中安装依赖。安装技能不等于安装 Python 依赖。
+
+首次使用建议补齐以下 **8 组配套能力**，每份汇报按实际需要调用。已有技能保留；仅在获得授权后安装缺失项。
+
+| 外部配套技能 | 来源与作者 | 职责 |
+|---|---|---|
+| Impeccable | [pbakaus](https://github.com/pbakaus/impeccable) | 主视觉系统与视觉审查 |
+| UI UX Pro Max | [nextlevelbuilder](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | 补充设计参考 |
+| Humanizer | [blader](https://github.com/blader/humanizer) | 普通文字优化 |
+| GSAP Skills | [GreenSock](https://github.com/greensock/gsap-skills) | 动效与对象连续性 |
+| ImageGen | [OpenAI 技能](https://github.com/openai/skills/blob/main/skills/.system/imagegen/SKILL.md) | 位图插画、图片编辑与透明素材 |
+| Playwright 或可用的宿主浏览器 | [OpenAI 技能](https://github.com/openai/skills/blob/main/skills/.curated/playwright/SKILL.md) | 实际渲染与交互验收 |
+| Ponytail | [DietrichGebert](https://github.com/DietrichGebert/ponytail) | 简洁且完整的代码实现 |
+| Visualize | OpenAI 宿主插件目录；未核实独立公开仓库 | 对话内可视化探索 |
+
+Academic Humanizer 是作者维护的衍生工作，原有 AIScientists-Dev、Kiterlin 等署名与来源说明均保留。完整来源及早期工作流借鉴见[来源说明](plugins/html-brifing/skills/html-brifing/references/sources.md)。
+
+## 3. 使用
 
 下列为示例请求，不代表已测量的业务效果：
 
@@ -48,7 +77,7 @@ codex plugin add html-brifing@html-brifing
 
 可直接用浏览器打开[虚构离线示例](examples/offline-routing.html)，查看绑定到对象的展开说明。它不连接真实排程系统。
 
-## 3. 如何组合
+## 4. 如何组合
 
 ![流程：证据与听众目标进入主技能，按需使用已有技能统一制作，再验收最终文件](assets/workflow.zh-CN.svg)
 
@@ -68,7 +97,7 @@ codex plugin add html-brifing@html-brifing
 
 辅助技能缺失时采用已写明的基础路径。必要的浏览器或图像生成工具缺失时保留明确缺口。技能文件本身不提供模型、运行环境、凭据或服务权限；不得静默切换到付费 ImageGen API。
 
-## 4. 沉淀的实践经验
+## 5. 沉淀的实践经验
 
 - 先让陌生听众理解业务上下文，再进入实现细节。
 - 主视图保留方案核心，次要说明绑定到具体对象。
@@ -79,7 +108,7 @@ codex plugin add html-brifing@html-brifing
 
 [经验沉淀说明](plugins/html-brifing/skills/html-brifing/references/experience.md)区分通用经验与可覆盖的标题、导航、动效偏好。仓库不包含私有业务数据或项目截图。
 
-## 5. 适用范围、兼容性与限制
+## 6. 适用范围、兼容性与限制
 
 适用于项目汇报、研究解释、技术演示和讲者控制的 HTML 报告。生产应用使用网站开发流程，可编辑 PPTX 使用原生演示流程，纯文字周报使用普通写作流程。
 
@@ -93,15 +122,17 @@ codex plugin add html-brifing@html-brifing
 
 Agent 根据规则执行工作流，插件不保证确定性的技能调度或所有输出都正确。技能说明以英文为主，详细交付清单保留中文。两份 README 描述相同能力，不等于已验证双语运行表现。
 
-## 6. 开发、证据与来源
+## 7. 开发、证据与来源
 
 ```sh
 python3 scripts/check_package.py
-python3 -m unittest discover -s tests
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements-dev.lock
+.venv/bin/python -m unittest discover -s tests
 ```
 
-检查工具只需要 Python 3.10+ 标准库，检查包路径和资源，不代替浏览器验收。贡献前阅读 [AGENTS.md](AGENTS.md)、[当前状态](PROJECT_STATE.md)和[发布验证记录](project-support/evaluation.md)。复现报告请说明场景、状态、窗口和输入，不附私有材料。
+检查工具只需要 Python 3.10+ 标准库。完整测试还会运行内置绘图脚本；锁文件记录本次 Python 3.12 macOS 测试环境。其他系统需使用对应的虚拟环境执行路径，原生验收尚未验证。结构检查不代替浏览器验收。贡献前阅读 [AGENTS.md](AGENTS.md)、[当前状态](PROJECT_STATE.md)和[发布验证记录](project-support/evaluation.md)。复现报告请说明场景、状态、窗口和输入，不附私有材料。
 
-[来源与可选上游](plugins/html-brifing/skills/html-brifing/references/sources.md)区分借鉴来源、推荐技能和宿主文档。本仓库未复制第三方技能。
+[来源与可选上游](plugins/html-brifing/skills/html-brifing/references/sources.md)区分借鉴来源、推荐技能和宿主文档。外部配套技能保持独立；内置的作者维护衍生技能保留上游许可与署名。
 
 [MIT 许可](LICENSE)，版权所有 2026 Jay Tang，覆盖本仓库原创规则、图形和检查工具。外部技能、库和服务保留各自条款。欢迎通过 [Issues](https://github.com/thejaytang/html-brifing/issues) 反馈。

@@ -5,7 +5,7 @@ This is an orchestration contract interpreted by the agent, not an automatic dep
 ## Selection
 
 1. Check skills and tools exposed by the host. If a local skill is relevant, read its actual entrypoint and required references. Never hardcode another user's home path.
-2. Prefer the user's chosen helper, then the recommended helper below, then an available equivalent with the required inputs, outputs and evidence boundary. A matching name alone is insufficient.
+2. Prefer the user's explicitly chosen existing helper. Otherwise use the bundled academic-humanizer, academic-research-plotting and research-results-tables for their jobs, then the recommended external helpers below or an available equivalent with the required inputs, outputs and evidence boundary. A matching name alone is insufficient.
 3. Briefly state the helpers selected and any material gap. Do not require a routing report for a typo fix.
 4. If a helper is absent, use the supported baseline below. If a required capability is absent, complete independent work and identify the minimum missing step. Do not quietly change an explicitly requested medium or claim an unperformed check.
 5. Do not install, update, overwrite or remove other skills as a side effect of making a briefing. Obtain appropriate authorization for installation. Host and paid-service permissions remain in force.
@@ -39,6 +39,6 @@ One lead workflow owns integration. A helper's attractive image, passing unit te
 
 ## Getting helpers
 
-Recommended helpers are optional and not redistributed in this plugin. Keep existing installations. See sources.md for verified public upstreams and product documentation. Some helpers are private or user-maintained names, so treat them as capability hints rather than public download promises. There is no automatic skill dependency resolution here.
+The plugin bundles the author-maintained academic-humanizer, academic-research-plotting and research-results-tables with their required resources and original notices. Other recommended helpers remain external. Keep existing installations. On first use, the bundled html-brifing-setup skill recommends the full eight-group companion set and reports missing or unavailable capabilities; it installs nothing without authorization. See sources.md for verified public upstreams and product documentation. Visualize is host-provided; no standalone public source is asserted. There is no automatic skill dependency resolution here.
 
 Pin a helper version in project evidence when it materially affects reproducibility; otherwise record the helper actually used. Do not claim broad compatibility from one local combination.
