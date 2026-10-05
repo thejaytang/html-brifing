@@ -19,7 +19,8 @@ This is an orchestration contract interpreted by the agent, not an automatic dep
 | Empirical result tables | Semantic HTML tables | Actual analysis output → reconciled, readable table with notes | A plain semantic HTML table is sufficient; do not infer missing estimates |
 | Coordinated motion | Relevant GSAP modules selected below | Object identity and state transitions → controlled motion with stable reduced-motion state | CSS/native animation or static comparison; keep the presenter in control |
 | Raster scene, illustration, cutout or image edit | Codex system `$imagegen` | Purpose, composition, source roles and invariants → inspected final image in deliverable assets | Use the system skill; skip a personal duplicate; no silent paid API fallback or fake screenshot |
-| Matching hosted delivery in ChatGPT create/revise tasks | Available host Sites skills/tools | Canonical HTML source → matching Site and deployment URL | Read chatgpt-sites.md; respect local-only constraints; Sites is not bundled |\n| Conversation-only mechanism exploration or preview | Host Visualize | Explanatory question → interactive chat preview | Read the exposed skill; do not treat chat preview as offline delivery |
+| Matching hosted delivery in ChatGPT create/revise tasks | Available host Sites skills/tools | Canonical HTML source → matching Site and deployment URL | Read chatgpt-sites.md; respect local-only constraints; Sites is not bundled |
+| Conversation-only mechanism exploration or preview | Host Visualize | Explanatory question → interactive chat preview | Read the exposed skill; do not treat chat preview as offline delivery |
 | Rendered behavior and final-file QA | Host browser tools; playwright when appropriate | Final entrypoint, state sequence and viewports → observed results and evidence | If unavailable, static review only; browser acceptance remains NOT_RUN |
 
 ## GSAP selection
