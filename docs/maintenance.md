@@ -8,7 +8,7 @@ The quick start pins v0.5.0 for reproducibility. To move to a newer published ve
 
 ```sh
 codex plugin marketplace remove html-brifing
-codex plugin marketplace add thejaytang/html-brifing --ref v0.5.0
+codex plugin marketplace add thejaytang/html-brifing --ref v0.6.0
 codex plugin add html-brifing@html-brifing
 ```
 
@@ -16,7 +16,7 @@ Replace v0.5.0 with the published version you intend to install. This does not a
 
 ## First use, duplicates and bundle updates
 
-Invoke `$html-brifing` directly. Storytelling stays in the lead. The bundle includes 13 entries: the lead, Impeccable, UI UX Pro Max, ImageGen, Playwright and eight GSAP modules. Select by need; no full-suite execution or mandatory setup inventory. Visualize is an optional host companion for chat previews, not redistributed source. Preserve existing personal copies. Generic writing/coding and academic suites remain outside the plugin.
+Invoke `$html-brifing` directly. Storytelling stays in the lead. The bundle includes 12 entries: the lead, Impeccable, UI UX Pro Max, Playwright and eight GSAP modules. Use Codex system `$imagegen`; a separate personal copy is unnecessary when the system skill is present. Select by need; no full-suite execution or mandatory setup inventory. Visualize is an optional host companion for chat previews, not redistributed source. Preserve existing personal copies. Generic writing/coding and academic suites remain outside the plugin.
 
 All redistributed snapshots and file hashes are in plugins/html-brifing/bundle.json; the companion THIRD_PARTY_NOTICES.md identifies upstreams, licenses and adaptations. When updating a copied skill, review its actual changes, preserve notices, update its hashes and rerun structural and behavioral checks. Do not apply the root MIT license over Apache-2.0 material. Visualize stays external until a redistribution grant is established.
 
