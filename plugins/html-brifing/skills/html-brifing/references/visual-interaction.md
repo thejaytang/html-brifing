@@ -1,4 +1,9 @@
-For presenter-led reports, read [editorial-glass.md](editorial-glass.md) before implementing vertical page transitions. Keep native reading scroll and page changes distinct; verify the visible overlap, fresh edge gesture, damping and reduced-motion state.\n\n# Visual explanation and interaction
+For presenter-led reports, read [editorial-glass.md](editorial-glass.md) before implementing vertical page transitions. Keep native reading scroll and page changes distinct; verify the visible overlap, fresh edge gesture, damping and reduced-motion state.
+
+For presenter-led reports, read [editorial-glass.md](editorial-glass.md) before implementing vertical page transitions. Keep native reading scroll and page changes distinct; verify visible overlap, damping, fresh edge gestures and reduced-motion behavior.
+
+
+# Visual explanation and interaction
 
 ## Choose the relationship before the medium
 
