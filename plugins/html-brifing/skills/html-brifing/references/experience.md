@@ -22,6 +22,8 @@ A useful title pattern is “short phrase: conclusion or theme,” with a one-se
 
 Store project overrides in the project's existing instructions/design source. Do not alter installed third-party skills to express project preferences. User and project requirements govern the workflow.
 
-The optional [editorial glass preset](editorial-glass.md) captures translucent pages, restrained blur and release-to-snap navigation. Preserve readable overflow and stable controls; verify native gestures before claiming smoothness.\n\n## Maintenance
+The optional [editorial glass preset](editorial-glass.md) captures translucent pages, restrained blur and release-to-snap navigation. Preserve readable overflow and stable controls; verify native gestures before claiming smoothness.
+
+## Maintenance
 
 Change rules in response to reproducible failures or a demonstrated recurring need. Preserve stable rules here and keep release/evaluation evidence in the repository's project-support area. Do not add a gate, template or file for every incidental comment.
