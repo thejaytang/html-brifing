@@ -1,6 +1,6 @@
 # ImageGen as part of scene design
 
-Use the available imagegen skill for new raster images, edits, cutouts and visual variants when the intended subject benefits from generated imagery. Read its current instructions; do not copy a fixed model name or provider API into this plugin.
+For Codex, use the system `$imagegen` skill for raster images, edits, cutouts and visual variants when the subject benefits from generated imagery. This plugin intentionally omits a duplicate personal ImageGen skill. If the host does not expose a system image skill, explain the gap. Do not install or invoke a duplicate personal copy when the system skill is available.
 
 ## Choose what to generate
 
