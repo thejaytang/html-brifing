@@ -2,9 +2,9 @@
 
 ## Actual bundled skills
 
-See [the 13-entry inventory](bundled-skills.md) for every shipped entrypoint and [the installed-package notices](../../../THIRD_PARTY_NOTICES.md) for direct upstream links, licenses, source snapshots and adaptations. The repository's original work is MIT; redistributed skill files retain MIT or Apache-2.0 as listed.
+See [the 12-entry inventory](bundled-skills.md) for every shipped entrypoint and [the installed-package notices](../../../THIRD_PARTY_NOTICES.md) for direct upstream links, licenses, source snapshots and adaptations. The repository's original work is MIT; redistributed skill files retain MIT or Apache-2.0 as listed.
 
-Impeccable supplies design direction; UI UX Pro Max supplies focused design references; ImageGen supplies image guidance; all eight GSAP modules are available for task-based selection. Playwright supports final verification. Their snapshots are restored from the license-reviewed 0.3.1 bundle, not fetched as unreviewed upstream upgrades. Ordinary writing/coding and academic publishing suites remain excluded.
+Impeccable supplies design direction; UI UX Pro Max supplies focused design references; Codex system `$imagegen` supplies image guidance; all eight GSAP modules are available for task-based selection. Playwright supports final verification. The bundled snapshots are restored from the license-reviewed 0.3.1 bundle, not fetched as unreviewed upstream upgrades. ImageGen is provided by Codex and is not duplicated in this package. Ordinary writing/coding and academic publishing suites remain excluded.
 
 Visualize is part of the intended collaboration when the host exposes it. Its original manifest declares Proprietary, so source/assets are not redistributed. Use it for conversation exploration or previews and keep the final HTML artifact separate. Host tools and runtime libraries remain separate from skill files.
 
