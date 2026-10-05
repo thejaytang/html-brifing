@@ -32,15 +32,15 @@ class PackageChecks(unittest.TestCase):
         self.assertTrue(checker.check(self.root))
 
     def test_missing_bundled_entry(self):
-        (self.root / 'plugins/html-brifing/skills/imagegen/SKILL.md').unlink()
+        (self.root / 'plugins/html-brifing/skills/playwright/SKILL.md').unlink()
         self.assertTrue(checker.check(self.root))
 
     def test_missing_image_reference(self):
-        (self.root / 'plugins/html-brifing/skills/imagegen/references/cli.md').unlink()
+        (self.root / 'plugins/html-brifing/skills/ui-ux-pro-max/references/workflow.md').unlink()
         self.assertTrue(checker.check(self.root))
 
     def test_missing_upstream_notice(self):
-        (self.root / 'plugins/html-brifing/skills/imagegen/LICENSE.txt').unlink()
+        (self.root / 'plugins/html-brifing/skills/playwright/LICENSE.txt').unlink()
         self.assertTrue(checker.check(self.root))
 
     def test_missing_gsap_module(self):
@@ -48,7 +48,7 @@ class PackageChecks(unittest.TestCase):
         self.assertTrue(checker.check(self.root))
 
     def test_modified_bundled_script(self):
-        target = self.root / 'plugins/html-brifing/skills/imagegen/scripts/image_gen.py'
+        target = self.root / 'plugins/html-brifing/skills/ui-ux-pro-max/scripts/core.py'
         target.write_text('print("changed")')
         self.assertTrue(checker.check(self.root))
 

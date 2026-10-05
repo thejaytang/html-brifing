@@ -1,11 +1,11 @@
-# HTML Brifing
+# HTML Briefing
 
 <p align="center">
   <a href="README.md"><img src="assets/lang-en.svg" alt="Read in English" width="132" height="40"></a>
   <a href="README.zh-CN.md"><img src="assets/lang-zh.svg" alt="切换到简体中文" width="132" height="40"></a>
 </p>
 
-![HTML Brifing：项目证据、清晰叙事与离线汇报](assets/cover.zh-CN.svg)
+![HTML Briefing：项目证据、清晰叙事与离线汇报](assets/cover.zh-CN.svg)
 
 以叙事编排为核心，组合 Impeccable、UI UX Pro Max、ImageGen、GSAP 与宿主已有的 Visualize，把项目材料做成有证据支撑的 HTML 汇报。适合需要解释工作机制与结果的技术团队、研究者和业务实践者。
 
@@ -13,11 +13,11 @@
 
 [安装](#1-安装) · [试用请求](#3-使用) · [下载 v0.5.0](https://github.com/thejaytang/html-brifing/releases/tag/v0.5.0) · [能力映射](plugins/html-brifing/skills/html-brifing/references/capabilities.md)
 
-包内提供可移植的根级 `plugin.json`，并保留受支持的 Codex 兼容清单；这不等于已经验证跨宿主运行。标识符有意保留为 `html-brifing`。这是技能编排插件，不是幻灯片编辑器或自动依赖管理器。
+包内提供可移植的根级 `plugin.json`，并保留受支持的 Codex 兼容清单；这不等于已经验证跨宿主运行。显示名称已更正为 **HTML Briefing**。为兼容现有安装，插件和技能调用标识仍保留为 `html-brifing`。这是技能编排插件，不是幻灯片编辑器或自动依赖管理器。
 
 ## 1. 安装
 
-需要支持插件的 Codex、文件访问能力和已授权的项目工作区。实际渲染验收需要浏览器。插件包含 13 个技能入口：主技能、4 个辅助技能和 GSAP 的 8 个模块。宿主服务和运行库仍需单独具备，只在任务需要时检查。
+需要支持插件的 Codex、文件访问能力和已授权的项目工作区。实际渲染验收需要浏览器。插件包含 12 个技能入口：主技能、3 个内置辅助技能和 GSAP 的 8 个模块。Codex 上的图像生成使用系统 `$imagegen` 技能，插件不再打包重复的个人版。宿主服务和运行库仍需单独具备，只在任务需要时检查。
 
 ```sh
 codex plugin marketplace add thejaytang/html-brifing --ref v0.5.0
@@ -37,22 +37,21 @@ codex plugin add html-brifing@html-brifing
 
 ## 2. 插件实际包含什么
 
-**插件内置 13 个真实技能入口**，所需参考资料、脚本与许可一同打包。已有个人技能保留：明确指定已有版本时优先使用，否则主流程使用包内版本。
+**插件内置 12 个真实技能入口**，所需参考资料、脚本与许可一同打包。已有个人技能保留：明确指定已有版本时优先使用，否则主流程使用包内版本。
 
 | 内置工作流 | 入口数 | 来源与职责 |
 |---|---:|---|
-| HTML Brifing | 1 | Jay Tang：叙事、证据、场景连续性、组合统筹与交付验收 |
+| HTML Briefing | 1 | Jay Tang：叙事、证据、场景连续性、组合统筹与交付验收 |
 | Impeccable | 1 | [pbakaus](https://github.com/pbakaus/impeccable)：主视觉系统与视觉审查 |
 | UI UX Pro Max | 1 | [nextlevelbuilder](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)：可搜索的配色、字体、图表与交互参考 |
-| ImageGen | 1 | [OpenAI](https://github.com/openai/skills/blob/main/skills/.system/imagegen/SKILL.md)：图像生成、编辑规则与备用脚本 |
 | Playwright | 1 | [OpenAI](https://github.com/openai/skills/blob/main/skills/.curated/playwright/SKILL.md)：浏览器验收规则与命令包装脚本 |
 | GSAP Skills | 8 | [GreenSock](https://github.com/greensock/gsap-skills)：core、timeline、scrolltrigger、performance、plugins、utils、react、frameworks，按需选择 |
 
-[全部 13 个入口](plugins/html-brifing/skills/html-brifing/references/bundled-skills.md) · [许可、来源和打包修改记录](plugins/html-brifing/THIRD_PARTY_NOTICES.md)
+[全部 12 个入口](plugins/html-brifing/skills/html-brifing/references/bundled-skills.md) · [许可、来源和打包修改记录](plugins/html-brifing/THIRD_PARTY_NOTICES.md)
 
 **叙事编排由主技能负责。** 它确定听众需要理解什么，将主张与证据关联，按目的选择叙事结构，并安排每个场景为什么接在前一个之后。决策汇报、机制讲解、进展说明与平行项目不能强套同一模板。原有[业务经验沉淀](plugins/html-brifing/skills/html-brifing/references/experience.md)完整保留。
 
-Impeccable 确定视觉方向；UI UX Pro Max 在该方向内提供具体参考；ImageGen 支持图像表达；GSAP 支持有解释作用的动效。**Visualize 通过宿主已有安装参与组合**，用于对话中的机制探索与交互预览。其原插件标注专有许可，公开包不复制源码。需要对话预览而宿主缺少它时，建议查看宿主官方插件目录；独立 HTML 交付不因此受阻。
+Impeccable 确定视觉方向；UI UX Pro Max 在该方向内提供具体参考；Codex 系统 `$imagegen` 技能支持图像表达；GSAP 支持有解释作用的动效。**Visualize 通过宿主已有安装参与组合**，用于对话中的机制探索与交互预览。其原插件标注专有许可，公开包不复制源码。需要对话预览而宿主缺少它时，建议查看宿主官方插件目录；独立 HTML 交付不因此受阻。
 
 不要求每次调用全部技能：静态图表不需要 GSAP，原生 HTML 不需要 React 模块。普通写作、代码、图表与表格使用 Agent 已有能力和项目工具。Humanizer、Ponytail 与科研发表套件仍不打包。工具与运行库在需要时检查，不静默安装。
 
@@ -64,7 +63,7 @@ Impeccable 确定视觉方向；UI UX Pro Max 在该方向内提供具体参考�
 |---|---|---|
 | 有项目说明与测试记录的技术项目 | “使用 $html-brifing，为不熟悉项目的同事制作 10 分钟离线 HTML 汇报。” | 上下文、设计、机制与实测结果完整；最终文件经过离线打开验收 |
 | 交互混乱的已有汇报 | “使用 $html-brifing，修复这份 HTML 的嵌套说明，保留叙事和视觉方向。” | 局部修复；受影响对象的选择、切换和折叠没有残留说明 |
-| 需要形象解释的概念 | “使用 $html-brifing，用 ImageGen 插画与可编辑标签解释这个机制。” | 检查后的概念图、精确标签和完整素材包；生成工具缺失时说明缺口 |
+| 需要形象解释的概念 | “使用 $html-brifing，用系统 `$imagegen` 技能与可编辑标签解释这个机制。” | 检查后的概念图、精确标签和完整素材包；生成工具缺失时说明缺口 |
 | 仍处在讨论阶段 | “使用 $html-brifing，审阅材料并只给提纲。” | 基于证据的提纲；不实施、不安装、不发布 |
 
 可直接用浏览器打开[虚构离线示例](examples/offline-routing.html)，查看绑定到对象的展开说明。它不连接真实排程系统。
@@ -81,13 +80,13 @@ Impeccable 确定视觉方向；UI UX Pro Max 在该方向内提供具体参考�
 | 视觉系统 | Impeccable | 统一层级、布局、字体与状态 |
 | 设计参考 | UI UX Pro Max | 具体配色、字体、图表与交互选择 |
 | 数据图表与表格 | 原生 HTML/SVG 与项目已有图表工具 | 明确指标、忠实图表与核对后的结果表 |
-| 位图视觉表达 | ImageGen | 场景、对象、插画、图片编辑和透明素材 |
+| 位图视觉表达 | Codex 系统 `$imagegen` | 场景、对象、插画、图片编辑和透明素材 |
 | 精确关系表达 | 原生 HTML/SVG 与内置图解规则 | 可编辑标签、架构、字段映射和交互 |
 | 有解释作用的动效 | 按需选择的 GSAP 模块 | 对象连续性与联动状态 |
 | 对话预览 | 宿主已有的 Visualize | 在正式制作前探索机制与交互 |
 | 验收 | 宿主浏览器工具或 Playwright | 实际渲染、操作与交付检查 |
 
-辅助技能缺失时采用已写明的基础路径。必要的浏览器或图像生成工具缺失时保留明确缺口。技能文件本身不提供模型、运行环境、凭据或服务权限；不得静默切换到付费 ImageGen API。
+辅助技能缺失时采用已写明的基础路径。必要的浏览器或图像生成工具缺失时保留明确缺口。插件不再打包个人版 ImageGen。如果 Codex 已提供系统 `$imagegen` 技能，使用系统版本即可，无需另装个人版。技能文件本身不提供模型、运行环境、凭据或服务权限；不得静默切换到付费 ImageGen API。
 
 ## 5. 沉淀的实践经验
 
@@ -109,7 +108,7 @@ Impeccable 确定视觉方向；UI UX Pro Max 在该方向内提供具体参考�
 | macOS 上的 Codex | 本次发布目标；实际安装与包验证证据见验证记录 |
 | Windows / Linux | 文件和资源可迁移，但尚未验证原生安装和渲染验收 |
 | 其他技能宿主 | 不声明兼容；需适配并验证宿主工具和插件格式 |
-| ImageGen、GSAP 等辅助能力 | 技能文件已内置；运行环境和服务权限单独检查，本次未逐一运行所有组合 |
+| ImageGen、GSAP 等辅助能力 | ImageGen 使用 Codex 系统能力；GSAP 指南随包提供；运行环境和服务权限单独检查 |
 | 离线输出 | 新建独立本地汇报的制作要求，逐份验收；插件安装本身可能联网 |
 
 Agent 根据规则执行工作流，插件不保证确定性的技能调度或所有输出都正确。技能说明以英文为主，详细交付清单保留中文。两份 README 描述相同能力，不等于已验证双语运行表现。

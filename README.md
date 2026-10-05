@@ -1,11 +1,11 @@
-# HTML Brifing
+# HTML Briefing
 
 <p align="center">
   <a href="README.md"><img src="assets/lang-en.svg" alt="Read in English" width="132" height="40"></a>
   <a href="README.zh-CN.md"><img src="assets/lang-zh.svg" alt="切换到简体中文" width="132" height="40"></a>
 </p>
 
-![HTML Brifing: project evidence, a clear story, an offline presentation](assets/cover.svg)
+![HTML Briefing: project evidence, a clear story, an offline presentation](assets/cover.svg)
 
 Turn project materials into an evidence-led HTML briefing with storytelling at its center and a focused visual combination: Impeccable, UI UX Pro Max, ImageGen and GSAP, plus optional host Visualize previews. For technical teams, researchers and practitioners explaining how their work operates and what its results support.
 
@@ -13,11 +13,11 @@ Turn project materials into an evidence-led HTML briefing with storytelling at i
 
 [Install](#1-install) · [Try a request](#3-use-it) · [Download v0.5.0](https://github.com/thejaytang/html-brifing/releases/tag/v0.5.0) · [Capability map](plugins/html-brifing/skills/html-brifing/references/capabilities.md)
 
-The package has a portable root `plugin.json` and retains the supported Codex compatibility manifest. This format choice does not establish cross-host runtime compatibility. The identifier `html-brifing` is intentional. This is a skill orchestration plugin, not a slide editor or an automatic dependency manager.
+The package has a portable root `plugin.json` and retains the supported Codex compatibility manifest. This format choice does not establish cross-host runtime compatibility. The displayed name is **HTML Briefing**. The existing plugin and skill slug `html-brifing` remains for installation compatibility. This is a skill orchestration plugin, not a slide editor or an automatic dependency manager.
 
 ## 1. Install
 
-Requires a Codex host with plugin support, file access and an authorized project workspace. A browser is needed to verify the rendered deliverable. The plugin installs 13 skill entries: the lead, four helpers and eight GSAP modules together. Host services and runtime libraries remain separate; the workflow checks them only when needed.
+Requires a Codex host with plugin support, file access and an authorized project workspace. A browser is needed to verify the rendered deliverable. The plugin installs 12 skill entries: the lead, three bundled helpers and eight GSAP modules. On Codex, image generation uses the system `$imagegen` skill; this plugin does not package a duplicate personal copy. Host services and runtime libraries remain separate; the workflow checks them only when needed.
 
 ```sh
 codex plugin marketplace add thejaytang/html-brifing --ref v0.5.0
@@ -37,22 +37,21 @@ Use either installation route, not both. See [maintenance](docs/maintenance.md) 
 
 ## 2. What is actually included
 
-**13 skill entrypoints ship in this plugin.** Their required references, scripts and license notices are included. Existing personal skills are preserved: your explicitly chosen version wins, otherwise the lead uses the bundled copy.
+**12 skill entrypoints ship in this plugin.** Their required references, scripts and license notices are included. Existing personal skills are preserved: your explicitly chosen version wins, otherwise the lead uses the bundled copy.
 
 | Included workflow | Entries | Source and role |
 |---|---:|---|
-| HTML Brifing | 1 | Jay Tang: storytelling, evidence, scene continuity, integration and delivery checks |
+| HTML Briefing | 1 | Jay Tang: storytelling, evidence, scene continuity, integration and delivery checks |
 | Impeccable | 1 | [pbakaus](https://github.com/pbakaus/impeccable): main design system and visual review |
 | UI UX Pro Max | 1 | [nextlevelbuilder](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill): searchable palette, font, chart and interaction references |
-| ImageGen | 1 | [OpenAI](https://github.com/openai/skills/blob/main/skills/.system/imagegen/SKILL.md): image generation/editing instructions and fallback scripts |
 | Playwright | 1 | [OpenAI](https://github.com/openai/skills/blob/main/skills/.curated/playwright/SKILL.md): browser QA instructions and CLI wrapper |
 | GSAP Skills | 8 | [GreenSock](https://github.com/greensock/gsap-skills): core, timeline, scrolltrigger, performance, plugins, utils, react and frameworks; select by need |
 
-[All 13 entrypoints](plugins/html-brifing/skills/html-brifing/references/bundled-skills.md) · [Licenses, sources and package adaptations](plugins/html-brifing/THIRD_PARTY_NOTICES.md)
+[All 12 entrypoints](plugins/html-brifing/skills/html-brifing/references/bundled-skills.md) · [Licenses, sources and package adaptations](plugins/html-brifing/THIRD_PARTY_NOTICES.md)
 
 **Storytelling belongs to the lead.** It identifies the audience takeaway, connects claims to evidence, chooses a narrative shape for the purpose and plans why each scene follows the previous one. Decision briefs, mechanism explanations, progress reports and parallel projects need different structures. The original [business experience](plugins/html-brifing/skills/html-brifing/references/experience.md) remains intact.
 
-Impeccable sets visual direction; UI UX Pro Max provides focused references within that direction; ImageGen supplies useful imagery; GSAP supplies meaningful motion. **Visualize completes this combination through an existing host installation**, for conversation-only exploration and previews. Its original manifest is proprietary, so its source is not in this public package. If a requested chat preview needs it and it is unavailable, suggest the host's official plugin catalog; do not block standalone HTML delivery.
+Impeccable sets visual direction; UI UX Pro Max provides focused references within that direction; the Codex system `$imagegen` skill supplies useful imagery; GSAP supplies meaningful motion. **Visualize completes this combination through an existing host installation**, for conversation-only exploration and previews. Its original manifest is proprietary, so its source is not in this public package. If a requested chat preview needs it and it is unavailable, suggest the host's official plugin catalog; do not block standalone HTML delivery.
 
 The plugin does not require every helper on every task. Static charts need no GSAP, and vanilla HTML needs no React workflow. Ordinary writing, coding, charts and tables use the agent's competence and project tools. Humanizer, Ponytail and academic publishing suites remain excluded. Tools and runtime libraries are checked when needed, without silent installation.
 
@@ -64,7 +63,7 @@ Illustrative requests, not claims about measured business outcomes:
 |---|---|---|
 | A technical project with source notes and test records | “Use $html-brifing to make a 10-minute offline HTML briefing for colleagues unfamiliar with this project.” | Context, design, mechanism and observed results; final files opened and checked offline |
 | An existing briefing with confusing interactions | “Use $html-brifing to fix the nested explanations in this HTML. Keep the narrative and visual direction.” | Scoped repair; selecting, switching and collapsing affected objects leaves no stale details |
-| A concept needs a visual explanation | “Use $html-brifing to explain this mechanism with an ImageGen illustration and editable labels.” | Inspected conceptual image, precise page labels and packaged assets; missing generation tools are disclosed |
+| A concept needs a visual explanation | “Use $html-brifing to explain this mechanism with the system `$imagegen` skill and editable labels.” | Inspected conceptual image, precise page labels and packaged assets; missing generation tools are disclosed |
 | A decision is still being discussed | “Use $html-brifing to review these materials and propose an outline only.” | An evidence-bound outline; no implementation, installation or publication |
 
 Open [the fictional offline example](examples/offline-routing.html) directly in a browser. It demonstrates object-bound explanations; it does not connect to a real scheduler.
@@ -81,13 +80,13 @@ The lead skill establishes the audience, argument and evidence. It chooses the r
 | Visual system | Impeccable | Consistent hierarchy, layout, typography and states |
 | Design references | UI UX Pro Max | Targeted palette, typography, chart and interaction choices |
 | Data and tables | Native HTML/SVG and existing project chart tools | Defined metrics, faithful charts and reconciled tables |
-| Raster visual expression | ImageGen | Scenes, objects, illustrations, image edits and cutouts |
+| Raster visual expression | Codex system `$imagegen` | Scenes, objects, illustrations, image edits and cutouts |
 | Precise relationships | Native HTML/SVG and the bundled diagram guidance | Editable labels, architecture, field mapping and interactions |
 | Meaningful motion | Relevant GSAP modules | Object continuity and coordinated state changes |
 | Conversation preview | Host Visualize when available | Explore a mechanism or interaction before final implementation |
 | Verification | Host browser tools or Playwright | Actual rendering, interactions and delivery checks |
 
-Missing optional helpers use documented baselines. An unavailable required browser or image-generation tool remains an explicit gap. A skill file alone does not provide a model, runtime, credentials or service access. No silent paid ImageGen API fallback.
+Missing optional helpers use documented baselines. An unavailable required browser or image-generation tool remains an explicit gap. The plugin does not bundle a personal ImageGen copy. If Codex exposes its system `$imagegen` skill, use that and skip any separately installed personal copy. A skill file alone does not provide a model, runtime, credentials or service access. No silent paid ImageGen API fallback.
 
 ## 5. Experience built into the workflow
 
@@ -109,7 +108,7 @@ Use this for project briefings, research explanations, technical demos and prese
 | Codex on macOS | Release target; actual installation and package evidence is recorded in the validation report |
 | Windows / Linux | Portable text/resources, but native installation and rendered acceptance are not verified |
 | Other skill hosts | No compatibility claim; host tooling and plugin format require adaptation/testing |
-| ImageGen, GSAP and other helpers | Skill files bundled; runtime/service requirements remain separate, and not all combinations are exercised |
+| ImageGen, GSAP and other helpers | ImageGen comes from Codex; GSAP guidance is bundled; runtime/service requirements remain separate |
 | Offline output | A production requirement for new standalone local briefings, verified per artifact; plugin installation itself may need network access |
 
 The workflow is interpreted by the agent. It does not guarantee deterministic routing or universally correct output. Instructions are primarily English; the detailed delivery checklist is retained in Chinese. Both README languages describe the same capabilities; this does not establish bilingual runtime testing.

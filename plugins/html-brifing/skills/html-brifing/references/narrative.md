@@ -21,6 +21,8 @@ For each important scene, identify the audience question, supported takeaway, so
 
 Review the title outline alone: does it reveal a coherent argument? Then review the default views: can an asynchronous reader understand the core point without opening every detail? Keep test method, observation and supported conclusion together. Cut repeated setup and decorative metrics, not essential qualifications or contributor boundaries.
 
+For professional communication and narrative reports, the outline also defines top chapter navigation. Keep short localized labels, full headings and scene membership in one chapter model. Follow [workspace controls](workspace-controls.md) for state and acceptance; do not impose report flow on a learning atlas.
+
 ## Give the audience enough context
 
 Identify who performs the task, the input, the downstream use and the consequence of the current obstacle. Keep background proportional to understanding. A useful planning sentence is: “In this workflow, this role needs this outcome; this obstacle prevents it; this design changes that relationship.” Do not invent financial loss or efficiency gains to complete the sentence.
