@@ -1,6 +1,6 @@
-# The 13 included skills
+# The 12 included skills
 
-One storytelling lead and 12 helper entries. Select by task, not by a requirement to use the whole bundle. Existing explicitly selected personal equivalents take precedence.
+One storytelling lead and 11 helper entries. Select by task, not by a requirement to use the whole bundle. Existing explicitly selected personal equivalents take precedence.
 
 | Entry | Role |
 |---|---|
@@ -18,6 +18,6 @@ One storytelling lead and 12 helper entries. Select by task, not by a requiremen
 | [gsap-react](../../gsap-react/SKILL.md) | Existing React projects only |
 | [gsap-frameworks](../../gsap-frameworks/SKILL.md) | Existing non-React framework projects only |
 
-Visualize completes the visual collaboration through the host when available. It is not bundled because its original manifest is Proprietary. It supports conversation previews; standalone HTML remains a separate artifact.
+Use the Codex system `$imagegen` skill for raster generation and editing; the plugin intentionally omits a duplicate personal copy. If Codex exposes the system skill, there is no need to install a personal ImageGen version. Visualize completes the visual collaboration through the host when available. It is not bundled because its original manifest is Proprietary. It supports conversation previews; standalone HTML remains a separate artifact.
 
 [Sources/licenses](../../../THIRD_PARTY_NOTICES.md) and [file hashes](../../../bundle.json) travel with the bundle. General writing, coding and academic publishing suites are not included or recommended prerequisites. Host services and runtime libraries are separate.
