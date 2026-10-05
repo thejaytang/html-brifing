@@ -1,4 +1,4 @@
-# 1. 定义这次要验收什么
+For page-by-page editorial glass transitions, test slow and fast wheel/trackpad gestures, reverse direction, long-page reading overflow, and a fresh outward gesture at the page edge. Confirm one adjacent page per gesture, visible sheet overlap, clean settling and a reduced-motion state. Static checks cannot prove native damping or frame rate.\n\n# 1. 定义这次要验收什么
 
 验收范围跟随改动。文字调整核对事实、双语对应与版面；修改共享折叠逻辑则覆盖各类调用及嵌套状态；重做动效或打包则验证相应交互和交付边界。先列必要检查及成功标准，再执行。复用项目工具与隔离环境，不为检查演示新建庞大框架。
 
