@@ -13,7 +13,7 @@ Turn project materials into an evidence-led HTML briefing with storytelling at i
 
 [Install](#1-install) · [Try a request](#3-use-it) · [Download v0.5.0](https://github.com/thejaytang/html-brifing/releases/tag/v0.5.0) · [Capability map](plugins/html-brifing/skills/html-brifing/references/capabilities.md)
 
-The package has a portable root `plugin.json` and retains the supported Codex compatibility manifest. This format choice does not establish cross-host runtime compatibility. The The displayed name is **HTML Briefing**. The existing plugin and skill slug `html-brifing` remains for installation compatibility. This is a skill orchestration plugin, not a slide editor or an automatic dependency manager.
+The package has a portable root `plugin.json` and retains the supported Codex compatibility manifest. This format choice does not establish cross-host runtime compatibility. The displayed name is **HTML Briefing**. The existing plugin and skill slug `html-brifing` remains for installation compatibility. This is a skill orchestration plugin, not a slide editor or an automatic dependency manager.
 
 ## 1. Install
 
@@ -44,7 +44,6 @@ Use either installation route, not both. See [maintenance](docs/maintenance.md) 
 | HTML Briefing | 1 | Jay Tang: storytelling, evidence, scene continuity, integration and delivery checks |
 | Impeccable | 1 | [pbakaus](https://github.com/pbakaus/impeccable): main design system and visual review |
 | UI UX Pro Max | 1 | [nextlevelbuilder](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill): searchable palette, font, chart and interaction references |
-| ImageGen | 1 | [OpenAI](https://github.com/openai/skills/blob/main/skills/.system/imagegen/SKILL.md): image generation/editing instructions and fallback scripts |
 | Playwright | 1 | [OpenAI](https://github.com/openai/skills/blob/main/skills/.curated/playwright/SKILL.md): browser QA instructions and CLI wrapper |
 | GSAP Skills | 8 | [GreenSock](https://github.com/greensock/gsap-skills): core, timeline, scrolltrigger, performance, plugins, utils, react and frameworks; select by need |
 
